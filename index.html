@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 
@@ -8,17 +7,16 @@
 
 <title>Lyn's Living Landscapes</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 --forest:#173c35;
---deepforest:#0f2d28;
---sage:#8ea89a;
+--deep:#102b26;
+--sage:#8da89a;
 --ocean:#6f9cad;
---mist:#eef5f4;
---sand:#f8f6f1;
+--mist:#edf6f5;
 --white:#ffffff;
 }
 
@@ -36,15 +34,15 @@ body{
 font-family:'Inter',sans-serif;
 background:linear-gradient(
 180deg,
-#eef5f4 0%,
-#f7faf9 50%,
-#eef4f3 100%
+#eef7f5 0%,
+#f9fcfb 50%,
+#eef6f4 100%
 );
-color:#243530;
+color:#253832;
 overflow-x:hidden;
 }
 
-h1,h2,h3{
+h1,h2,h3,h4{
 font-family:'Cormorant Garamond',serif;
 font-weight:600;
 }
@@ -53,20 +51,9 @@ a{
 text-decoration:none;
 }
 
-.hero{
-height:100vh;
-background:
-linear-gradient(
-rgba(12,35,30,.45),
-rgba(12,35,30,.55)
-),
-url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1800');
-background-size:cover;
-background-position:center;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+img{
+display:block;
+max-width:100%;
 }
 
 nav{
@@ -78,47 +65,69 @@ padding:30px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:10;
+z-index:100;
 }
 
 .logo{
-color:white;
-font-size:2rem;
 font-family:'Cormorant Garamond',serif;
-font-weight:600;
+font-size:2rem;
+font-weight:700;
+color:white;
 }
 
 .logo span{
-font-size:2.3rem;
+font-size:2.4rem;
 }
 
 .menu a{
 color:white;
 margin-left:30px;
-letter-spacing:1px;
 font-size:.95rem;
+letter-spacing:1px;
+transition:.3s;
+}
+
+.menu a:hover{
+opacity:.8;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+rgba(14,41,36,.55),
+rgba(14,41,36,.55)
+),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1800');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
 }
 
 .hero-content{
-max-width:900px;
-text-align:center;
+max-width:950px;
 padding:20px;
 color:white;
 }
 
 .est{
-letter-spacing:3px;
+letter-spacing:4px;
 font-size:.8rem;
+margin-bottom:15px;
 }
 
 .hero h1{
-font-size:5.5rem;
-line-height:1;
-margin:20px 0;
+font-size:6rem;
+line-height:.95;
+margin-bottom:25px;
 }
 
 .hero p{
-max-width:700px;
+max-width:760px;
 margin:auto;
 font-size:1.2rem;
 line-height:1.9;
@@ -127,11 +136,11 @@ line-height:1.9;
 .hero-btn{
 display:inline-block;
 margin-top:35px;
-padding:16px 40px;
-border-radius:40px;
-background:rgba(255,255,255,.15);
+padding:18px 42px;
+border-radius:50px;
+border:1px solid rgba(255,255,255,.5);
+background:rgba(255,255,255,.12);
 backdrop-filter:blur(8px);
-border:1px solid rgba(255,255,255,.4);
 color:white;
 transition:.3s;
 }
@@ -145,52 +154,55 @@ color:var(--forest);
 padding:120px 10%;
 }
 
-.about-grid{
+.about{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:70px;
 align-items:center;
 }
 
-.about-grid img{
+.about img{
+height:700px;
 width:100%;
-height:650px;
 object-fit:cover;
-border-radius:28px;
+border-radius:30px;
 box-shadow:0 25px 60px rgba(0,0,0,.12);
 }
 
 .section-tag{
-color:var(--ocean);
-letter-spacing:3px;
+letter-spacing:4px;
 font-size:.8rem;
+color:var(--ocean);
+margin-bottom:15px;
 }
 
-.about-text h2{
-font-size:4rem;
-margin:15px 0 25px;
+.about h2{
+font-size:4.2rem;
 color:var(--forest);
+margin-bottom:25px;
 }
 
-.about-text p{
-margin-bottom:18px;
+.about p{
 line-height:2;
+margin-bottom:20px;
+font-size:1.05rem;
 }
 
 .center-title{
 text-align:center;
-margin-bottom:70px;
+margin-bottom:80px;
 }
 
 .center-title span{
-letter-spacing:3px;
+letter-spacing:4px;
+font-size:.8rem;
 color:var(--ocean);
 }
 
 .center-title h2{
 font-size:4rem;
-margin-top:15px;
 color:var(--forest);
+margin-top:15px;
 }
 
 .cards{
@@ -201,9 +213,9 @@ gap:30px;
 
 .card{
 background:white;
-border-radius:25px;
+border-radius:28px;
 overflow:hidden;
-box-shadow:0 15px 35px rgba(0,0,0,.08);
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 transition:.4s;
 }
 
@@ -223,97 +235,30 @@ padding:25px;
 
 .card h3{
 font-size:2rem;
-margin-bottom:10px;
 color:var(--forest);
+margin-bottom:12px;
 }
 
-.quote{
-padding:140px 10%;
-background:
-linear-gradient(
-135deg,
-#17483f,
-#4f8190
-);
-color:white;
-text-align:center;
-}
-
-.quote h2{
-font-size:4rem;
-max-width:1000px;
-margin:auto;
-line-height:1.4;
-}
-
-.values{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.value{
-background:white;
-padding:35px;
-border-radius:22px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-}
-
-.value h3{
-font-size:2rem;
-margin-bottom:15px;
-color:var(--forest);
-}
-
-.contact{
-padding:180px 10%;
-text-align:center;
-background:
-linear-gradient(
-rgba(15,45,40,.65),
-rgba(15,45,40,.65)
-),
-url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800');
-background-size:cover;
-background-position:center;
-color:white;
-}
-
-.contact h2{
-font-size:4rem;
-margin-bottom:20px;
-}
-
-.contact a{
-color:white;
-font-size:1.2rem;
-}
-
-footer{
-background:#102d27;
-padding:50px;
-text-align:center;
-color:white;
+.card p{
+line-height:1.8;
 }
 
 @media(max-width:1000px){
 
 .hero h1{
-font-size:3.5rem;
+font-size:3.8rem;
 }
 
-.about-grid,
-.cards,
-.values{
+.about{
 grid-template-columns:1fr;
 }
 
-.about-grid img{
+.about img{
 height:450px;
 }
 
-.quote h2{
-font-size:2.5rem;
+.cards{
+grid-template-columns:1fr;
 }
 
 }
@@ -321,6 +266,7 @@ font-size:2.5rem;
 </style>
 
 </head>
+
 <body>
 
 <section class="hero">
@@ -332,10 +278,9 @@ font-size:2.5rem;
 </div>
 
 <div class="menu">
-<a href="#about">About</a>
-<a href="#experiences">Experiences</a>
-<a href="#values">Values</a>
-<a href="#contact">Contact</a>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="blog.html">Blog</a>
 </div>
 
 </nav>
@@ -350,11 +295,11 @@ Inspired by Possibility.
 </h1>
 
 <p>
-Creating meaningful journeys through discovery, healing, home and learning. We curate experiences that connect people with nature, culture, wellbeing and lifelong growth.
+Discover extraordinary destinations, healing escapes, unique accommodations and meaningful learning experiences thoughtfully curated for every traveler. Explore the world through discovery, healing, home and learning.
 </p>
 
 <a href="#experiences" class="hero-btn">
-Begin Your Journey
+Explore Experiences
 </a>
 
 </div>
@@ -363,26 +308,26 @@ Begin Your Journey
 
 <section class="section" id="about">
 
-<div class="about-grid">
+<div class="about">
 
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200" alt="Forest Path">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400" alt="Forest">
 
-<div class="about-text">
+<div>
 
 <div class="section-tag">ABOUT US</div>
 
-<h2>A Living Landscape For Growth</h2>
+<h2>Welcome to Lyn's Living Landscapes</h2>
 
 <p>
-Founded in 2018, Lyn's Living Landscapes creates meaningful travel and hospitality experiences inspired by discovery, healing, home and learning.
+Since 2018, Lyn's Living Landscapes has been helping travelers discover meaningful experiences through tourism and hospitality.
 </p>
 
 <p>
-We believe that nature has the power to restore, inspire and transform. Every journey is designed to encourage reflection, connection and personal growth.
+We specialize in personalized journeys focused on discovery, healing, home and learning. From nature adventures and cultural immersion to wellness retreats and unique accommodations, every experience is thoughtfully tailored to your interests and goals.
 </p>
 
 <p>
-Our work prioritizes safety, environmental stewardship, respect for culture and sustainable tourism practices while helping guests discover the beauty of our world.
+Whether you are seeking relaxation, exploration, inspiration or connection, we help create journeys that leave lasting memories while respecting people, culture and the environment.
 </p>
 
 </div>
@@ -394,48 +339,106 @@ Our work prioritizes safety, environmental stewardship, respect for culture and 
 <section class="section" id="experiences">
 
 <div class="center-title">
-<span>EXPERIENCES</span>
-<h2>Discovery • Healing • Home • Learning</h2>
+
+<span>OUR EXPERIENCES</span>
+
+<h2>
+Discovery • Healing • Home • Learning
+</h2>
+
+</div>
+
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000" alt="Discovery">
+<div class="card-content">
+<h3>Discovery</h3>
+<p>
+Explore hidden destinations, photography tours, wildlife encounters, city adventures and unforgettable landscapes that inspire curiosity and wonder.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1000" alt="Healing">
+<div class="card-content">
+<h3>Healing</h3>
+<p>
+Reconnect through waterfalls, forests, oceans and wellness experiences designed to restore balance, reflection and inner peace.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000" alt="Home">
+<div class="card-content">
+<h3>Home</h3>
+<p>
+Discover hotels, resorts, villas, eco-lodges and camping experiences that provide comfort, belonging and memorable stays.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000" alt="Learning">
+<div class="card-content">
+<h3>Learning</h3>
+<p>
+Learn through cooking experiences, environmental awareness, cultural immersion, exhibits, events and meaningful local connections.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="center-title">
+
+<span>WHY TRAVEL WITH US</span>
+
+<h2>
+Guided By Purpose
+</h2>
+
 </div>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1000">
 <div class="card-content">
-<h3>Discovery</h3>
+<h3>🛡 Safety First</h3>
 <p>
-Explore nature trails, photography adventures, wildlife viewing, city tours and unique destinations around the world.
+Your wellbeing is our priority. Every experience is thoughtfully designed to support safe, responsible and enjoyable travel.
 </p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1000">
 <div class="card-content">
-<h3>Healing</h3>
+<h3>🌿 Environmental Stewardship</h3>
 <p>
-Reconnect through waterfalls, forests, wellness escapes and peaceful places designed to nourish mind, body and soul.
+We encourage sustainable tourism practices that respect landscapes, wildlife and future generations.
 </p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000">
 <div class="card-content">
-<h3>Home</h3>
+<h3>🤝 Respect For Culture</h3>
 <p>
-Discover villas, resorts, hotels, eco-lodges and camping experiences that create comfort and belonging.
+We celebrate local traditions, heritage and communities through meaningful and respectful engagement.
 </p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1000
 <div class="card-content">
-<h3>Learning</h3>
+<h3>✨ Personalized Experiences</h3>
 <p>
-Learn through cultural immersion, cooking experiences, environmental awareness, exhibits and community events.
+Every itinerary can be customized according to your interests, travel goals and preferred experiences.
 </p>
 </div>
 </div>
@@ -444,76 +447,88 @@ Learn through cultural immersion, cooking experiences, environmental awareness, 
 
 </section>
 
-<section class="quote">
+<section style="
+padding:100px 10%;
+background:linear-gradient(135deg,#173c35,#6f9cad);
+color:white;
+text-align:center;
+">
 
-<h2>
-“Every landscape carries a lesson. Every journey holds the possibility of transformation.”
+<h2 style="
+font-size:3rem;
+max-width:900px;
+margin:auto;
+line-height:1.5;
+">
+
+“Every landscape tells a story.
+Every journey offers an opportunity
+to discover, heal, belong and learn.”
+
 </h2>
 
 </section>
 
-<section class="section" id="values">
+<section style="
+padding:140px 10%;
+text-align:center;
+background:
+linear-gradient(
+rgba(15,45,40,.60),
+rgba(15,45,40,.60)
+),
+url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800');
+background-size:cover;
+background-position:center;
+color:white;
+">
 
-<div class="center-title">
-<span>OUR VALUES</span>
-<h2>Guided By Purpose</h2>
-</div>
+<h2 style="font-size:4rem;margin-bottom:20px;">
+Begin Your Journey
+</h2>
 
-<div class="values">
+<p style="
+max-width:700px;
+margin:auto;
+line-height:2;
+font-size:1.1rem;
+">
 
-<div class="value">
-<h3>🛡 Safety First</h3>
-<p>
-Every experience is thoughtfully designed to support wellbeing, care and responsible travel.
-</p>
-</div>
+Let us help create a personalized experience inspired by your interests, goals and travel dreams.
 
-<div class="value">
-<h3>🌿 Environmental Stewardship</h3>
-<p>
-Protecting landscapes, supporting sustainable tourism and respecting the natural world.
-</p>
-</div>
-
-<div class="value">
-<h3>🤝 Respect For Culture</h3>
-<p>
-Honouring traditions, communities and local heritage through meaningful connections.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="contact" id="contact">
-
-<h2>Begin Your Journey</h2>
-
-<p>
-Discover thoughtfully curated experiences inspired by nature,
-wellbeing, culture and learning. We look forward to helping you create a meaningful journey.
 </p>
 
 <br><br>
 
-<a href="mailto:lynslivinglandscapes@gmail.com">
+<a href="mailto:lynslivinglandscapes@gmail.com"
+style="
+color:white;
+font-size:1.2rem;
+">
 📧 lynslivinglandscapes@gmail.com
 </a>
 
 <br><br>
 
 <p>
-Personalized experiences • Worldwide destinations • Since 2018
+Customized Experiences • Worldwide Destinations • Since 2018
 </p>
 
 </section>
 
-<footer>
+<footer style="
+background:#102b26;
+padding:60px;
+text-align:center;
+color:white;
+">
 
-<h3>🍃 Lyn's Living Landscapes</h3>
-
-<br>
+<h3 style="
+font-size:2rem;
+margin-bottom:15px;
+">
+🍃 Lyn's Living Landscapes
+</h3>
 
 <p>
 Rooted in Nature • Inspired by Possibility
@@ -528,7 +543,7 @@ Discovery • Healing • Home • Learning
 <br>
 
 <p>
-Worldwide Experiences • Since 2018
+Tourism • Hospitality • Worldwide Experiences
 </p>
 
 </footer>
