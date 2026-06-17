@@ -3,27 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lyn's Living Landscapes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f7f3ee;
+color:#2f352b;
+line-height:1.7;
+}
+
+nav{
+position:absolute;
+top:0;
+width:100%;
+padding:30px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:10;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+color:white;
+letter-spacing:1px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:0.95rem;
+letter-spacing:1px;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(28,35,25,.45),rgba(28,35,25,.45)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+.hero-content h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+font-weight:600;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:1.2rem;
+max-width:650px;
+margin:auto;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:35px;
+padding:14px 35px;
+background:#d6b98c;
+color:#2f352b;
+text-decoration:none;
+border-radius:40px;
+font-weight:500;
+}
+
+.section{
+padding:100px 10%;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+text-align:center;
+margin-bottom:20px;
+}
+
+.section-text{
+max-width:850px;
+margin:auto;
+text-align:center;
+color:#666;
+}
+
+.pillars{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:70px;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+margin-bottom:15px;
+}
+
+footer{
+background:#2f352b;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Lyn's Living Landscapes</h1>
-
-<p>
-Discovery • Healing • Home • Learning
-</p>
-
-<p>
-Creating meaningful journeys through nature, culture,
-wellness and personal discovery since 2018.
-</p>
-
 <nav>
+<div class="logo">Lyn's Living Landscapes</div>
+
+<div class="nav-links">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
-<a href="blog.html">Blog</a>
+<a href="blog.html">Journal</a>
+</div>
 </nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Discovery. Healing. Home. Learning.</h1>
+
+<p>
+Creating meaningful journeys through nature,
+wellness, culture and personal transformation.
+</p>
+
+<a href="services.html" class="hero-btn">
+Explore Experiences
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+A Living Landscape for Growth
+</h2>
+
+<p class="section-text">
+Lyn's Living Landscapes blends nature, learning,
+wellbeing and meaningful experiences into spaces
+where people reconnect with themselves, their
+communities and the world around them.
+</p>
+
+<div class="pillars">
+
+<div class="card">
+<h3>Discovery</h3>
+<p>
+Explore new places, perspectives and possibilities.
+</p>
+</div>
+
+<div class="card">
+<h3>Healing</h3>
+<p>
+Restore balance through wellness, reflection and nature.
+</p>
+</div>
+
+<div class="card">
+<h3>Home</h3>
+<p>
+Create environments that nurture belonging and connection.
+</p>
+</div>
+
+<div class="card">
+<h3>Learning</h3>
+<p>
+Cultivate curiosity, growth and lifelong learning.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Lyn's Living Landscapes</h2>
+
+<p>
+Rooted in nature. Inspired by possibility.
+</p>
+
+</footer>
 
 </body>
 </html>
