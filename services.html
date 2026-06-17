@@ -1,25 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Services | Lyn's Living Landscapes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--forest:#173c35;
+--deep:#102b26;
+--sage:#8da89a;
+--ocean:#6f9cad;
+--mist:#edf6f5;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(
+180deg,
+#eef7f5 0%,
+#f9fcfb 50%,
+#eef6f4 100%
+);
+color:#253832;
+overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+font-family:'Cormorant Garamond',serif;
+font-weight:600;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+display:block;
+max-width:100%;
+}
+
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:30px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:700;
+color:white;
+}
+
+.logo span{
+font-size:2.4rem;
+}
+
+.menu a{
+color:white;
+margin-left:30px;
+font-size:.95rem;
+letter-spacing:1px;
+transition:.3s;
+}
+
+.menu a:hover{
+opacity:.8;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+rgba(7,40,35,.40),
+rgba(7,40,35,.60)
+),
+url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+.hero-content{
+max-width:950px;
+padding:20px;
+color:white;
+}
+
+.est{
+letter-spacing:4px;
+font-size:.8rem;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:6rem;
+line-height:.95;
+margin-bottom:25px;
+text-shadow:0 5px 25px rgba(0,0,0,.35);
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:1.2rem;
+line-height:1.9;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:35px;
+padding:18px 42px;
+border-radius:50px;
+background:rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.5);
+backdrop-filter:blur(8px);
+color:white;
+transition:.3s;
+}
+
+.hero-btn:hover{
+background:white;
+color:var(--forest);
+}
+
+.section{
+padding:120px 10%;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.service-grid img{
+width:100%;
+height:650px;
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.section-tag{
+letter-spacing:4px;
+font-size:.8rem;
+color:var(--ocean);
+margin-bottom:15px;
+}
+
+.service-grid h2{
+font-size:4rem;
+color:var(--forest);
+margin-bottom:25px;
+}
+
+.service-grid p{
+line-height:2;
+font-size:1.05rem;
+margin-bottom:20px;
+}
+
+.feature-list{
+margin-top:25px;
+}
+
+.feature-list li{
+margin-bottom:12px;
+line-height:1.8;
+}
+
+.alt-bg{
+background:
+linear-gradient(
+180deg,
+#f2f8f6 0%,
+#edf6f4 100%
+);
+}
+
+@media(max-width:1000px){
+
+.hero h1{
+font-size:3.8rem;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.service-grid img{
+height:450px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
+<section class="hero">
+
 <nav>
+
+<div class="logo">
+<span>🍃</span> Lyn's Living Landscapes
+</div>
+
+<div class="menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="blog.html">Blog</a>
+</div>
+
 </nav>
 
-<h1>Services</h1>
+<div class="hero-content">
+
+<div class="est">EST. 2018</div>
+
+<h1>
+Our Services & Experiences
+</h1>
 
 <p>
-Personalized experiences designed around Discovery, Healing,
-Home and Learning.
+Discover, heal, belong and learn through personalized tourism and hospitality experiences thoughtfully designed around your interests, goals and dreams.
 </p>
+
+<a href="#discovery" class="hero-btn">
+Explore Our Services
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="service-grid">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80" alt="Lagoon">
+
+<div>
+
+<div class="section-tag">INTRODUCTION</div>
+
+<h2>Personalized Tourism & Hospitality</h2>
+
+<p>
+Since 2018, Lyn's Living Landscapes has been helping travelers discover meaningful experiences across the world through tourism and hospitality.
+</p>
+
+<p>
+We create journeys inspired by discovery, healing, home and learning while respecting local cultures, protecting the environment and supporting responsible travel.
+</p>
+
+<p>
+Whether you dream of nature escapes, wellness retreats, cultural immersion, adventure experiences or unique accommodations, we help bring your vision to life.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section alt-bg" id="discovery">
+
+<div class="service-grid">
+
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400" alt="Discovery">
+
+<div>
+
+<div class="section-tag">DISCOVERY</div>
+
+<h2>Explore New Possibilities</h2>
+
+<p>
+Discover destinations, landscapes and experiences that inspire curiosity and adventure.
+</p>
+
+<ul class="feature-list">
+<li>🏔 Nature Trips</li>
+<li>📸 Photography Tours</li>
+<li>🦅 Wildlife Viewing</li>
+<li>🌍 Hidden Destinations</li>
+<li>🏙 City Tours</li>
+<li>🧗 Adventure Activities</li>
+<li>🪨 Rock Wall Experiences</li>
+<li>🎭 Cultural Exploration</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="service-grid">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1400" alt="Healing">
+
+<div>
+
+<div class="section-tag">HEALING</div>
+
+<h2>Reconnect With Nature</h2>
+
+<p>
+Allow nature to restore balance through peaceful environments, wellness experiences and moments of reflection.
+</p>
+
+<ul class="feature-list">
+<li>💧 Waterfall Escapes</li>
+<li>🌊 Ocean Retreats</li>
+<li>🌿 Wellness Experiences</li>
+<li>🧘 Mindfulness Activities</li>
+<li>🌲 Nature Immersion</li>
+<li>☀ Relaxation Journeys</li>
+<li>🕊 Personal Reflection</li>
+<li>🌸 Reconnection With Self</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section alt-bg">
+
+<div class="service-grid">
+
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1400" alt="Accommodation">
+
+<div>
+
+<div class="section-tag">HOME</div>
+
+<h2>Find Your Perfect Stay</h2>
+
+<p>
+Every journey deserves a place where you feel comfortable, inspired and connected.
+</p>
+
+<ul class="feature-list">
+<li>🏨 Hotels</li>
+<li>🏝 Resorts</li>
+<li>🏡 Villas</li>
+<li>⛺ Camping Experiences</li>
+<li>✨ Glamping</li>
+<li>🌿 Eco Lodges</li>
+<li>🏕 Nature Retreats</li>
+<li>🌎 Unique Accommodations</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="service-grid">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400" alt="Learning">
+
+<div>
+
+<div class="section-tag">LEARNING</div>
+
+<h2>Learn Through Experience</h2>
+
+<p>
+Expand your perspective through meaningful cultural, environmental and educational experiences.
+</p>
+
+<ul class="feature-list">
+<li>🍳 Cooking Experiences</li>
+<li>📚 Tourism Learning</li>
+<li>🌿 Environmental Awareness</li>
+<li>🎨 Cultural Immersion</li>
+<li>🏛 Exhibits</li>
+<li>🎪 Events</li>
+<li>🤝 Community Activities</li>
+<li>🌏 Local Traditions</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+<section class="section alt-bg">
+
+<div style="
+max-width:1200px;
+margin:auto;
+text-align:center;
+">
+
+<div class="section-tag">CUSTOMIZED EXPERIENCES</div>
+
+<h2 style="
+font-size:4rem;
+color:#173c35;
+margin-bottom:30px;
+">
+Designed Around Your Journey
+</h2>
+
+<p style="
+max-width:900px;
+margin:auto;
+line-height:2;
+font-size:1.1rem;
+">
+At Lyn's Living Landscapes, no two journeys are exactly the same. We customize experiences according to your interests, travel goals, preferred accommodations, wellness objectives, learning interests and desired activities. Whether you seek adventure, relaxation, cultural immersion or meaningful learning experiences, we work with you to create a journey that feels uniquely yours.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div style="
+max-width:1000px;
+margin:auto;
+background:white;
+padding:60px;
+border-radius:30px;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+">
+
+<div class="section-tag">HOW TO BOOK</div>
+
+<h2 style="
+font-size:3.5rem;
+color:#173c35;
+margin-bottom:25px;
+">
+Send Your Booking Inquiry
+</h2>
+
+<p style="
+line-height:2;
+margin-bottom:30px;
+">
+Our booking form is currently handled through email to ensure every request receives personal attention. Copy the format below and send it to:
+</p>
+
+<p style="
+font-size:1.2rem;
+font-weight:600;
+color:#173c35;
+margin-bottom:35px;
+">
+📧 lynslivinglandscapes@gmail.com
+</p>
+
+<div style="
+background:#edf6f5;
+padding:35px;
+border-radius:20px;
+text-align:left;
+line-height:2;
+font-family:monospace;
+white-space:pre-line;
+">
+
+BOOKING INQUIRY
+
+Full Name:
+
+Country:
+
+Email Address:
+
+Travel Dates:
+
+Number of Guests:
+
+Preferred Destination:
+
+Interested Service:
+(Discovery / Healing / Home / Learning)
+
+Preferred Accommodation:
+(Hotel / Resort / Villa / Camping / Glamping / Other)
+
+Special Requests:
+
+Additional Notes:
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section alt-bg">
+
+<div style="
+max-width:1000px;
+margin:auto;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(12px);
+padding:60px;
+border-radius:30px;
+text-align:center;
+">
+
+<div class="section-tag">IMPORTANT NOTE</div>
+
+<h2 style="
+font-size:3rem;
+color:#173c35;
+margin-bottom:25px;
+">
+Thank You For Your Patience
+</h2>
+
+<p style="
+line-height:2;
+font-size:1.1rem;
+">
+We receive many inquiries and booking requests throughout the year. Please allow us time to carefully review your information and create the best recommendations for your journey. We will get back to you as soon as possible.
+</p>
+
+</div>
+
+</section>
+
+<section style="
+padding:140px 10%;
+text-align:center;
+background:
+linear-gradient(
+rgba(8,40,35,.45),
+rgba(8,40,35,.65)
+),
+url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+">
+
+<h2 style="
+font-size:4rem;
+margin-bottom:25px;
+">
+Thank You For Choosing
+Lyn's Living Landscapes
+</h2>
+
+<p style="
+max-width:850px;
+margin:auto;
+line-height:2;
+font-size:1.15rem;
+">
+We look forward to helping you discover, heal, belong and learn through meaningful travel experiences around the world.
+</p>
+
+<p style="
+margin-top:35px;
+font-size:1rem;
+letter-spacing:1px;
+opacity:.9;
+">
+Tourism • Hospitality • Worldwide Experiences
+</p>
+
+</section>
+
+<footer style="
+background:#102b26;
+padding:60px;
+text-align:center;
+color:white;
+">
+
+<h3 style="
+font-size:2rem;
+margin-bottom:15px;
+">
+🍃 Lyn's Living Landscapes
+</h3>
+
+<p>
+Tourism • Hospitality • Worldwide Experiences
+</p>
+
+<p style="
+margin-top:15px;
+opacity:.6;
+font-size:.9rem;
+">
+© 2018 Lyn's Living Landscapes. All Rights Reserved.
+</p>
+
+</footer>
 
 </body>
 </html>
