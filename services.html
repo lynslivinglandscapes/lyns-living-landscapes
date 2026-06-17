@@ -1,5 +1,5 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 
@@ -19,6 +19,7 @@
 --ocean:#6f9cad;
 --mist:#edf6f5;
 --white:#ffffff;
+--gold:#d8c39a;
 }
 
 *{
@@ -87,10 +88,10 @@ letter-spacing:1px;
 height:90vh;
 background:
 linear-gradient(
-rgba(8,35,30,.45),
-rgba(8,35,30,.60)
+rgba(7,32,28,.45),
+rgba(7,32,28,.60)
 ),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=80');
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=80');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -101,52 +102,41 @@ color:white;
 }
 
 .hero-content{
-max-width:950px;
+max-width:900px;
 padding:20px;
 }
 
 .hero h1{
 font-size:6rem;
 line-height:.95;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:1.2rem;
-line-height:2;
 max-width:800px;
 margin:auto;
+line-height:2;
+font-size:1.15rem;
 }
 
-.hero-buttons{
-margin-top:40px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:16px 36px;
-border-radius:50px;
+.hero-btn{
 display:inline-block;
-transition:.3s;
-}
-
-.btn-primary{
+margin-top:35px;
+padding:18px 40px;
+border-radius:50px;
 background:white;
 color:var(--forest);
-}
-
-.btn-secondary{
-border:1px solid rgba(255,255,255,.6);
-color:white;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(8px);
+font-weight:600;
 }
 
 .section{
 padding:120px 10%;
+}
+
+.center{
+text-align:center;
+max-width:1000px;
+margin:auto;
 }
 
 .section-tag{
@@ -157,44 +147,29 @@ margin-bottom:15px;
 text-transform:uppercase;
 }
 
-.center-title{
-text-align:center;
-margin-bottom:70px;
-}
-
-.center-title h2{
+.center h2{
 font-size:4rem;
 color:var(--forest);
+margin-bottom:25px;
 }
 
-.intro{
-max-width:1000px;
-margin:auto;
-text-align:center;
-}
-
-.intro p{
+.center p{
 line-height:2;
-font-size:1.1rem;
-margin-top:20px;
+font-size:1.05rem;
 }
 
 .services-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:40px;
+gap:35px;
+margin-top:70px;
 }
 
 .service-card{
 background:white;
-border-radius:30px;
+border-radius:28px;
 overflow:hidden;
 box-shadow:0 20px 50px rgba(0,0,0,.08);
-transition:.4s;
-}
-
-.service-card:hover{
-transform:translateY(-8px);
 }
 
 .service-card img{
@@ -207,46 +182,35 @@ padding:35px;
 }
 
 .service-content h3{
-font-size:2.4rem;
+font-size:2.3rem;
 color:var(--forest);
 margin-bottom:15px;
 }
 
 .service-content p{
 line-height:1.9;
-margin-bottom:20px;
 }
 
-.service-content ul{
-list-style:none;
+.alt{
+background:#f3f8f5;
 }
 
-.service-content li{
-padding:8px 0;
-}
-
-.alt-bg{
-background:#f4f9f7;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.why-card{
+.booking-box{
 background:white;
-padding:35px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,.06);
+border-radius:30px;
+padding:60px;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
 }
 
-.why-card h3{
-font-size:1.5rem;
-margin-bottom:15px;
-color:var(--forest);
+.template{
+margin-top:30px;
+background:#edf6f5;
+border:2px solid #dbe8e4;
+border-radius:20px;
+padding:35px;
+line-height:2;
+font-family:monospace;
+white-space:pre-line;
 }
 
 @media(max-width:1000px){
@@ -256,10 +220,6 @@ font-size:3.8rem;
 }
 
 .services-grid{
-grid-template-columns:1fr;
-}
-
-.why-grid{
 grid-template-columns:1fr;
 }
 
@@ -299,13 +259,12 @@ Our Services<br>
 </h1>
 
 <p>
-Discover, heal, feel at home and learn through personalized tourism and hospitality experiences thoughtfully designed around your interests, goals and travel dreams.
+Personalized tourism and hospitality experiences designed around discovery, healing, home and learning. Every journey is thoughtfully tailored to your goals, interests and preferred travel style.
 </p>
 
-<div class="hero-buttons">
-<a href="#services" class="btn btn-primary">Explore Services</a>
-<a href="#booking" class="btn btn-secondary">Booking Inquiry</a>
-</div>
+<a href="#booking" class="hero-btn">
+Start Your Inquiry
+</a>
 
 </div>
 
@@ -313,212 +272,110 @@ Discover, heal, feel at home and learn through personalized tourism and hospital
 
 <section class="section">
 
-<div class="intro">
+<div class="center">
 
 <div class="section-tag">
-PERSONALIZED TOURISM & HOSPITALITY
+TOURISM & HOSPITALITY
 </div>
 
-<h2 style="font-size:4rem;color:#173c35;">
+<h2>
 Travel Designed Around You
 </h2>
 
 <p>
-Since 2018, Lyn's Living Landscapes has been helping travelers discover meaningful experiences through carefully curated tourism and hospitality services.
+At Lyn's Living Landscapes, we believe every traveler deserves an experience that feels meaningful, comfortable and inspiring. Since 2018, we have been helping travelers discover destinations, explore cultures, reconnect with nature and create memorable experiences through personalized tourism and hospitality services.
 </p>
 
-<p>
-We believe travel should inspire connection, healing, learning and belonging. Every journey is thoughtfully customized according to your interests, travel goals and preferred experiences.
-</p>
-
-<p>
-Whether you are seeking adventure, wellness, cultural immersion, accommodation assistance or educational travel opportunities, we help create journeys that feel uniquely yours.
-</p>
-
-</div>
-
-</section>
-
-<section class="section alt-bg" id="services">
-
-<div class="center-title">
-<div class="section-tag">OUR SERVICES</div>
-<h2>Discover • Heal • Home • Learn</h2>
 </div>
 
 <div class="services-grid">
 
 <div class="service-card">
-
-<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Discover">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
 
 <div class="service-content">
-
-<h3>🌍 Discover</h3>
-
+<h3>🌍 Discovery Experiences</h3>
 <p>
-Explore destinations, landscapes and experiences that inspire curiosity, adventure and meaningful connections.
+Nature trips, photography tours, wildlife encounters, city exploration, cultural discovery and unique activities that inspire curiosity and adventure.
 </p>
-
-<ul>
-<li>✓ Nature Experiences</li>
-<li>✓ Cultural Exploration</li>
-<li>✓ Photography Journeys</li>
-<li>✓ Adventure Activities</li>
-<li>✓ Wildlife Encounters</li>
-<li>✓ Hidden Destinations</li>
-</ul>
-
 </div>
-
 </div>
 
 <div class="service-card">
-
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Heal">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80">
 
 <div class="service-content">
-
-<h3>🌿 Heal</h3>
-
+<h3>🌿 Healing Experiences</h3>
 <p>
-Reconnect with yourself through wellness-focused experiences designed to restore balance and wellbeing.
+Wellness-focused journeys, nature retreats, ocean escapes and peaceful environments designed to help travelers relax, recharge and reconnect.
 </p>
-
-<ul>
-<li>✓ Wellness Retreats</li>
-<li>✓ Nature Immersion</li>
-<li>✓ Ocean Escapes</li>
-<li>✓ Mindfulness Experiences</li>
-<li>✓ Relaxation Journeys</li>
-<li>✓ Personal Reflection</li>
-</ul>
-
+</div>
 </div>
 
+<div class="service-card">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80">
+
+<div class="service-content">
+<h3>🏡 Home & Accommodation</h3>
+<p>
+Hotels, resorts, villas, eco-lodges, camping experiences and unique stays carefully selected according to your preferences and comfort.
+</p>
+</div>
 </div>
 ```
-
-**Stop here.** Paste Part 1 first, then ask for **Part 2**, which contains:
-
-* Home service card
-* Learn service card
-* Why Travel With Us
-* Customized Journeys
-* Booking Inquiry section
-* Email template
-* Response-time section
-* Thank You banner
-* Footer
-* Closing HTML tags
-```html
+```html id="ykc73j"
 <div class="service-card">
-
-<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80" alt="Home">
+<img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80">
 
 <div class="service-content">
-
-<h3>🏡 Home</h3>
-
+<h3>📚 Learning Experiences</h3>
 <p>
-Find accommodations and environments where you feel comfortable, welcomed and connected throughout your journey.
+Cultural immersion, cooking experiences, environmental awareness programs, exhibits, events and opportunities to learn through meaningful travel.
 </p>
-
-<ul>
-<li>✓ Hotels</li>
-<li>✓ Resorts</li>
-<li>✓ Villas</li>
-<li>✓ Eco Lodges</li>
-<li>✓ Camping Experiences</li>
-<li>✓ Unique Accommodations</li>
-</ul>
-
 </div>
-
 </div>
 
 <div class="service-card">
-
-<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" alt="Learn">
+<img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80">
 
 <div class="service-content">
-
-<h3>📚 Learn</h3>
-
+<h3>✨ Customized Travel Planning</h3>
 <p>
-Expand your perspective through cultural, educational and environmental experiences that encourage meaningful learning.
+Every traveler is different. We help create personalized itineraries and recommendations based on your interests, goals, travel style and preferred experiences.
 </p>
-
-<ul>
-<li>✓ Cultural Immersion</li>
-<li>✓ Cooking Experiences</li>
-<li>✓ Tourism Learning</li>
-<li>✓ Community Activities</li>
-<li>✓ Environmental Awareness</li>
-<li>✓ Local Traditions</li>
-</ul>
-
+</div>
 </div>
 
+<div class="service-card">
+<img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=80">
+
+<div class="service-content">
+<h3>🤝 Hospitality Consultation</h3>
+<p>
+Professional guidance for accommodations, destinations, activities and travel planning to help you make informed travel decisions.
+</p>
+</div>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="section alt">
 
-<div class="center-title">
-<div class="section-tag">CUSTOMIZED JOURNEYS</div>
-<h2>Designed Around Your Goals</h2>
+<div class="center">
+
+<div class="section-tag">
+WHY TRAVEL WITH US
 </div>
 
-<div class="intro">
+<h2>
+Meaningful Experiences
+</h2>
 
 <p>
-No two travelers are exactly alike.
+We prioritize safety, environmental responsibility, respect for culture and personalized service. Every recommendation is thoughtfully selected to provide meaningful experiences that align with your travel goals.
 </p>
-
-<p>
-We work closely with travelers to create personalized experiences based on their interests, preferred destinations, accommodation preferences, wellness goals, learning interests and travel aspirations.
-</p>
-
-<p>
-Every recommendation is carefully selected to create a journey that feels uniquely yours.
-</p>
-
-</div>
-
-</section>
-
-<section class="section alt-bg">
-
-<div class="center-title">
-<div class="section-tag">WHY TRAVEL WITH US</div>
-<h2>Why Travelers Choose Us</h2>
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>🌿 Personalized</h3>
-<p>Every journey is customized around your interests and goals.</p>
-</div>
-
-<div class="why-card">
-<h3>🤝 Meaningful</h3>
-<p>Experiences focused on discovery, healing, home and learning.</p>
-</div>
-
-<div class="why-card">
-<h3>🌎 Responsible</h3>
-<p>We encourage respect for culture, people and the environment.</p>
-</div>
-
-<div class="why-card">
-<h3>✨ Personal Support</h3>
-<p>Every inquiry receives personal attention and recommendations.</p>
-</div>
 
 </div>
 
@@ -526,14 +383,7 @@ Every recommendation is carefully selected to create a journey that feels unique
 
 <section class="section" id="booking">
 
-<div style="
-max-width:1100px;
-margin:auto;
-background:white;
-padding:60px;
-border-radius:30px;
-box-shadow:0 20px 60px rgba(0,0,0,.08);
-">
+<div class="booking-box">
 
 <div class="section-tag">
 BOOKING INQUIRY
@@ -544,33 +394,27 @@ font-size:3.5rem;
 color:#173c35;
 margin-bottom:25px;
 ">
-Start Your Booking Inquiry
+Start Your Inquiry
 </h2>
 
 <p style="
 line-height:2;
-margin-bottom:20px;
+font-size:1.05rem;
 ">
-To ensure every traveler receives personalized attention, booking inquiries are handled directly through email consultation.
+To help us understand your travel needs, please copy the inquiry template below and send it to:
 </p>
 
 <p style="
-font-size:1.2rem;
+font-size:1.3rem;
 font-weight:600;
-margin-bottom:35px;
 color:#173c35;
+margin-top:20px;
+margin-bottom:30px;
 ">
 📧 lynslivinglandscapes@gmail.com
 </p>
 
-<div style="
-background:#edf6f5;
-padding:35px;
-border-radius:20px;
-line-height:2;
-white-space:pre-line;
-font-family:monospace;
-">
+<div class="template">
 
 BOOKING INQUIRY
 
@@ -582,15 +426,13 @@ Email Address:
 
 Travel Dates:
 
-Number of Guests:
+Number of Travelers:
 
 Preferred Destination:
 
 Service Interested In:
-(Discover / Heal / Home / Learn)
 
-Preferred Accommodation:
-(Hotel / Resort / Villa / Eco Lodge / Camping / Other)
+Accommodation Preference:
 
 Budget Range:
 
@@ -600,60 +442,39 @@ Additional Notes:
 
 </div>
 
-<div style="
-margin-top:35px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+<p style="
+margin-top:30px;
+line-height:2;
 ">
-
-<a href="mailto:lynslivinglandscapes@gmail.com?subject=Booking Inquiry"
-class="btn btn-primary">
-Send Email Inquiry
-</a>
-
-<a href="mailto:lynslivinglandscapes@gmail.com?subject=Customized Travel Experience"
-class="btn btn-secondary"
-style="color:#173c35;border:1px solid #173c35;">
-Customized Journey
-</a>
-
-</div>
+Once completed, simply copy the information above, paste it into your email and send it to our team.
+</p>
 
 </div>
 
 </section>
 
-<section class="section alt-bg">
+<section class="section alt">
 
-<div class="intro">
+<div class="center">
 
 <div class="section-tag">
-WHAT HAPPENS NEXT?
+PERSONAL ATTENTION
 </div>
 
-<h2 style="
-font-size:3.5rem;
-color:#173c35;
-margin-bottom:25px;
-">
-Thank You For Your Patience
+<h2>
+Every Inquiry Matters
 </h2>
 
 <p>
-Every booking inquiry is personally reviewed to ensure we understand your travel goals, preferences and expectations.
+Due to the number of inquiries and travel requests we receive, response times may vary.
 </p>
 
-<p>
-Due to the number of inquiries and booking requests we receive, response times may vary. We appreciate your patience and understanding.
+<p style="margin-top:20px;">
+Every inquiry is personally reviewed so we can better understand your preferences, goals and expectations before making recommendations.
 </p>
 
-<p>
-Our team is committed to providing the best possible recommendations, accommodations and experiences tailored to your preferred destinations, activities and travel style.
-</p>
-
-<p>
-We will respond as soon as possible and look forward to helping you discover, heal, feel at home and learn through meaningful travel experiences.
+<p style="margin-top:20px;">
+We appreciate your patience and look forward to helping you discover, heal, feel at home and learn through meaningful travel experiences.
 </p>
 
 </div>
@@ -665,10 +486,10 @@ padding:140px 10%;
 text-align:center;
 background:
 linear-gradient(
-rgba(8,35,30,.45),
-rgba(8,35,30,.65)
+rgba(7,32,28,.45),
+rgba(7,32,28,.65)
 ),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=80');
+url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2200&q=80');
 background-size:cover;
 background-position:center;
 color:white;
@@ -686,15 +507,15 @@ Lyn's Living Landscapes
 max-width:850px;
 margin:auto;
 line-height:2;
-font-size:1.15rem;
+font-size:1.1rem;
 ">
 We look forward to helping you discover, heal, feel at home and learn through meaningful travel experiences around the world.
 </p>
 
 <p style="
 margin-top:35px;
-font-size:1.1rem;
 letter-spacing:2px;
+font-size:1.1rem;
 ">
 Discover • Heal • Home • Learn
 </p>
@@ -721,7 +542,7 @@ Tourism • Hospitality • Worldwide Experiences
 
 <p style="
 margin-top:15px;
-opacity:.6;
+opacity:.7;
 font-size:.9rem;
 ">
 © 2018 Lyn's Living Landscapes. All Rights Reserved.
