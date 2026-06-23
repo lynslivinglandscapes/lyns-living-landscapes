@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,16 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-:root{
---forest:#173c35;
---deep:#102b26;
---sage:#8fa89f;
---ocean:#7aa4b4;
---mist:#f4faf8;
---white:#ffffff;
---gold:#d8c39a;
-}
 
 *{
 margin:0;
@@ -35,441 +22,479 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Inter',sans-serif;
-background:var(--mist);
-color:#30453f;
+background:#eef5f3;
+color:#203d3b;
+line-height:1.9;
 overflow-x:hidden;
 }
 
-h1,h2,h3,h4{
-font-family:'Cormorant Garamond',serif;
-font-weight:600;
-}
+/* NAVIGATION */
 
-img{
-display:block;
+header{
+position:fixed;
+top:0;
 width:100%;
+z-index:999;
+background:rgba(17,42,44,.82);
+backdrop-filter:blur(14px);
+padding:20px 8%;
 }
 
-a{
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:700;
+color:white;
 text-decoration:none;
 }
 
-header{
-padding:100px 10% 80px;
-text-align:center;
-background:
-linear-gradient(
-180deg,
-#eef7f5 0%,
-#f8fbfa 100%
-);
+.nav-links{
+display:flex;
+gap:35px;
 }
 
-.journal-tag{
-letter-spacing:4px;
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:600;
+letter-spacing:1px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#b9ddd4;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:140px 10% 100px;
+background:
+linear-gradient(rgba(10,35,35,.45),rgba(10,35,35,.45)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:950px;
+}
+
+.hero-sub{
+letter-spacing:6px;
+font-size:.9rem;
 text-transform:uppercase;
-font-size:.8rem;
-color:var(--ocean);
 margin-bottom:20px;
 }
 
-header h1{
-font-size:5rem;
-color:var(--forest);
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:6rem;
 line-height:1;
 margin-bottom:25px;
+font-weight:700;
 }
 
-header p{
-max-width:900px;
+.hero p{
+font-size:1.25rem;
+max-width:850px;
 margin:auto;
 line-height:2;
-font-size:1.05rem;
 }
 
 .author{
-margin-top:35px;
+margin-top:40px;
 font-weight:600;
-color:var(--forest);
+letter-spacing:2px;
 }
 
-.section{
+/* INTRO */
+
+.intro{
 padding:110px 10%;
+text-align:center;
+max-width:1200px;
+margin:auto;
 }
+
+.intro span{
+letter-spacing:5px;
+text-transform:uppercase;
+color:#7ea8b9;
+font-size:.85rem;
+}
+
+.intro h2{
+font-family:'Cormorant Garamond',serif;
+font-size:4.5rem;
+margin-top:20px;
+margin-bottom:35px;
+}
+
+.intro p{
+font-size:1.1rem;
+line-height:2;
+max-width:1000px;
+margin:auto;
+}
+
+/* SECTION TITLE */
 
 .section-title{
 text-align:center;
-margin-bottom:70px;
+padding-top:50px;
+margin-bottom:60px;
 }
 
 .section-title span{
-letter-spacing:4px;
-font-size:.8rem;
+letter-spacing:5px;
+font-size:.85rem;
 text-transform:uppercase;
-color:var(--ocean);
+color:#7ea8b9;
 }
 
 .section-title h2{
+font-family:'Cormorant Garamond',serif;
 font-size:4rem;
-color:var(--forest);
 margin-top:15px;
 }
 
-.article{
+/* BLOG CARD */
+
+.blog-card{
+width:min(1200px,92%);
+margin:0 auto 80px auto;
+background:white;
+border-radius:35px;
+overflow:hidden;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-margin-bottom:90px;
-background:white;
-padding:35px;
-border-radius:30px;
-box-shadow:0 20px 50px rgba(0,0,0,.07);
+align-items:stretch;
+box-shadow:0 15px 45px rgba(0,0,0,.06);
 }
 
-.article img{
-height:500px;
+.blog-image{
+height:100%;
+min-height:650px;
+}
+
+.blog-image img{
+width:100%;
+height:100%;
 object-fit:cover;
+display:block;
+}
+
+.blog-content{
+padding:70px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.blog-content h3{
+font-family:'Cormorant Garamond',serif;
+font-size:3.4rem;
+line-height:1.1;
+margin-bottom:30px;
+}
+
+.blog-content p{
+margin-bottom:22px;
+font-size:1.06rem;
+}
+
+.info-box{
+margin-top:15px;
+background:#f1f8f6;
+padding:25px;
 border-radius:20px;
 }
 
-.article-text h3{
-font-size:3rem;
-color:var(--forest);
-margin-bottom:20px;
+.info-box h4{
+margin-bottom:12px;
 }
 
-.article-text p{
-line-height:2;
-margin-bottom:18px;
+.info-box ul{
+padding-left:20px;
 }
 
-.highlights{
-background:#f3f8f6;
-padding:20px;
-border-radius:15px;
-margin-top:25px;
-}
-
-.highlights strong{
-display:block;
+.info-box li{
 margin-bottom:10px;
-color:var(--forest);
 }
 
-.highlights ul{
-padding-left:18px;
-line-height:2;
+@media(max-width:950px){
+
+.hero h1{
+font-size:4rem;
 }
 
-@media(max-width:1000px){
-
-header h1{
-font-size:3.5rem;
-}
-
+.intro h2,
 .section-title h2{
-font-size:2.8rem;
+font-size:3rem;
 }
 
-.article{
+.blog-card{
 grid-template-columns:1fr;
 }
 
-.article img{
-height:320px;
+.blog-image{
+min-height:450px;
+}
+
+.blog-content{
+padding:40px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<div class="journal-tag">
+<div class="navbar">
+
+<a href="index.html" class="logo">
+🌿 Lyn's Living Landscapes
+</a>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="blog.html">Blog</a>
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-sub">
 Travel Journal • Since 2018
 </div>
 
-<h1>
-Lyn Elixir's Journal
-</h1>
+<h1>Lyn Elixir's Journal</h1>
 
 <p>
-Discover • Heal • Home • Learn
-<br><br>
-Stories, inspiration, and meaningful experiences from around the world. Through Lyn's Living Landscapes, we explore destinations, wellness journeys, remarkable accommodations, cultural discoveries, and lifelong learning opportunities that enrich every stage of travel. Every story is designed to inspire curiosity, encourage well-being, and help travelers create deeper connections with people, places, and nature.
+Discover stories that inspire healing, meaningful exploration,
+personal growth, cultural understanding, and unforgettable journeys.
+Through Lyn's Living Landscapes, every destination becomes more than a
+place to visit—it becomes an experience that nurtures the heart,
+awakens curiosity, and creates lifelong memories.
 </p>
 
 <div class="author">
 Written by Lyn Elixir
 </div>
 
-</header>
+</div>
 
-<section class="section">
+</section>
 
-<div class="section-title">
+<section class="intro">
+
+<span>Welcome To The Journal</span>
+
+<h2>Travel Beyond Destinations</h2>
+
+<p>
+Travel is not simply about reaching a destination. It is about
+discovering stories, understanding cultures, reconnecting with nature,
+and creating meaningful moments that stay with us long after we return
+home. Through this journal, Lyn Elixir shares reflections, discoveries,
+travel inspirations, wellness escapes, cultural treasures, learning
+experiences, and remarkable accommodations from around the world.
+Every article is thoughtfully written to inspire deeper travel,
+encourage mindful exploration, and help travelers experience the world
+with greater appreciation and wonder.
+</p>
+
+</section>
+
+<section class="section-title">
 
 <span>Discovery Experiences</span>
 
-<h2>
-Explore The World With Wonder
-</h2>
+<h2>Explore The World With Wonder</h2>
 
-</div>
+</section>
 
-<div class="article">
+<!-- ARTICLE 1 -->
+
+<section class="blog-card">
+
+<div class="blog-image">
 
 <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=80">
 
-<div class="article-text">
+</div>
 
-<h3>
-Hidden Waterfalls Worth Discovering
-</h3>
+<div class="blog-content">
+
+<h3>Hidden Waterfalls Worth Discovering</h3>
 
 <p>
-Some of the most rewarding travel experiences are often found away from crowded attractions and popular tourist routes. Hidden waterfalls invite travelers to venture deeper into forests, mountain valleys, and protected natural landscapes where the sounds of rushing water and surrounding wildlife create an unforgettable atmosphere.
+Some of the most memorable travel experiences are found away from
+crowded attractions and busy tourist routes. Hidden waterfalls offer
+travelers opportunities to explore untouched landscapes where nature
+reveals its most peaceful and breathtaking beauty. Reaching these
+locations often becomes part of the adventure itself, leading visitors
+through forest trails, mountain valleys, and scenic viewpoints.
 </p>
 
 <p>
-For centuries, waterfalls have been associated with renewal, reflection, and natural beauty. Many communities throughout the world regard them as places of cultural significance, storytelling, and connection to nature. Reaching these locations often becomes part of the adventure itself, allowing travelers to experience scenic hiking trails, lush vegetation, and breathtaking viewpoints along the way.
+For centuries, waterfalls have inspired stories, legends, and cultural
+traditions. Communities throughout the world have considered them
+symbols of renewal, life, and reflection. The sound of flowing water
+creates a calming atmosphere that encourages travelers to slow down,
+observe their surroundings, and reconnect with nature.
 </p>
 
 <p>
-Whether you are a photographer, nature enthusiast, or traveler seeking peaceful moments, hidden waterfalls offer opportunities to slow down, reconnect with the environment, and appreciate the remarkable beauty that exists beyond the usual path.
+Whether visiting for photography, hiking, relaxation, or simple
+curiosity, hidden waterfalls remind us that some of the world's most
+extraordinary places are discovered when we venture beyond familiar
+paths and embrace the spirit of exploration.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Experience Highlights</strong>
+<h4>Experience Highlights</h4>
 
 <ul>
-<li>Scenic forest walks</li>
+<li>Forest hiking adventures</li>
 <li>Nature photography opportunities</li>
-<li>Peaceful outdoor environments</li>
-<li>Adventure and exploration</li>
-<li>Natural swimming areas where permitted</li>
+<li>Peaceful outdoor experiences</li>
+<li>Scenic mountain landscapes</li>
+<li>Natural wellness environments</li>
 </ul>
 
 </div>
 
 </div>
 
-</div>
+</section>
 
-<div class="article">
+<!-- ARTICLE 2 -->
+
+<section class="blog-card">
+
+<div class="blog-image">
 
 <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=80">
 
-<div class="article-text">
+</div>
 
-<h3>
-Heritage Towns & Cultural Treasures
-</h3>
+<div class="blog-content">
+
+<h3>Heritage Towns & Cultural Treasures</h3>
 
 <p>
-Historic towns preserve generations of stories, traditions, architecture, and cultural identity. Walking through heritage districts allows travelers to experience destinations beyond modern attractions by discovering the people, events, and customs that shaped local communities throughout history.
+Historic towns preserve generations of stories, architecture,
+traditions, and local identity. Walking through centuries-old streets
+allows travelers to experience destinations beyond modern attractions,
+offering a glimpse into the lives, customs, and craftsmanship that
+shaped communities over time.
 </p>
 
 <p>
-Beautiful stone streets, preserved buildings, local markets, and cultural landmarks provide opportunities to learn about regional heritage while supporting preservation efforts that keep these traditions alive for future generations.
+Many heritage destinations have survived wars, changing economies,
+and modernization while continuing to celebrate their unique cultural
+character. Stone pathways, colorful buildings, public squares,
+historic churches, local markets, and family-owned businesses all
+contribute to an atmosphere rich with authenticity and history.
 </p>
 
 <p>
-Exploring heritage destinations encourages meaningful travel by creating stronger connections between visitors and local communities. These experiences remind us that every destination has a unique story waiting to be discovered.
+Exploring heritage towns encourages meaningful travel by creating
+connections between visitors and local communities. These destinations
+remind us that every place carries stories worth preserving and sharing
+with future generations.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Experience Highlights</strong>
+<h4>Experience Highlights</h4>
 
 <ul>
 <li>Historic architecture</li>
-<li>Traditional food experiences</li>
-<li>Walking tours</li>
-<li>Local culture and customs</li>
-<li>Museums and heritage sites</li>
+<li>Traditional local cuisine</li>
+<li>Walking heritage tours</li>
+<li>Cultural storytelling</li>
+<li>Museums and landmarks</li>
 </ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="article">
-
-<img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1400&q=80">
-
-<div class="article-text">
-
-<h3>
-Wildlife Encounters & Nature Discovery
-</h3>
-
-<p>
-Wildlife experiences create opportunities to appreciate biodiversity while fostering respect for natural ecosystems. Observing animals within their natural habitats allows travelers to better understand the delicate balance that supports life across forests, wetlands, oceans, and protected reserves.
-</p>
-
-<p>
-Responsible wildlife tourism encourages conservation awareness and supports efforts to protect vulnerable species and habitats. Through guided experiences and educational programs, travelers gain valuable insight into environmental stewardship and sustainable tourism practices.
-</p>
-
-<p>
-These encounters often become some of the most memorable moments of any journey, offering a deeper appreciation for the natural world and our role in protecting it.
-</p>
-
-<div class="highlights">
-
-<strong>Experience Highlights</strong>
-
-<ul>
-<li>Wildlife observation</li>
-<li>Conservation awareness</li>
-<li>Nature education</li>
-<li>Photography opportunities</li>
-<li>Protected natural environments</li>
-</ul>
-
-</div>
 
 </div>
 
 </div>
 
 </section>
-<section class="section" style="background:#f7fbfa;">
 
-<div class="section-title">
+<!-- ARTICLE 3 -->
 
-<span>Healing Experiences</span>
+<section class="blog-card">
 
-<h2>
-Restore Balance & Well-Being
-</h2>
-
-</div>
-
-<div class="article">
-
-<img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80">
-
-<div class="article-text">
-
-<h3>
-Nature As A Path To Wellness
-</h3>
-
-<p>
-Throughout history, people have sought healing and renewal through their connection with nature. Forests, rivers, mountains, and open landscapes provide environments that encourage calmness, reflection, and a greater sense of balance. Modern research continues to show that spending time in natural surroundings can reduce stress and improve overall well-being.
-</p>
-
-<p>
-Nature wellness experiences invite travelers to slow down and become present in the moment. Gentle walks through forests, quiet moments beside rivers, and peaceful mountain views allow individuals to step away from daily demands and reconnect with themselves.
-</p>
-
-<p>
-These experiences focus not only on physical relaxation but also on emotional restoration. By spending meaningful time outdoors, travelers often discover a renewed appreciation for simplicity, mindfulness, and the beauty that surrounds them.
-</p>
-
-<div class="highlights">
-
-<strong>Wellness Benefits</strong>
-
-<ul>
-<li>Stress reduction</li>
-<li>Mental clarity</li>
-<li>Mindfulness and reflection</li>
-<li>Connection with nature</li>
-<li>Emotional renewal</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="article">
+<div class="blog-image">
 
 <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80">
 
-<div class="article-text">
+</div>
 
-<h3>
-Wellness Retreat Experiences
-</h3>
+<div class="blog-content">
+
+<h3>Wellness Retreats For Mind & Body</h3>
 
 <p>
-Wellness retreats provide dedicated opportunities for travelers to focus on personal well-being while enjoying peaceful environments designed for rest and renewal. Many retreats combine traditional healing practices with modern wellness programs that support physical, emotional, and mental health.
+Modern travel increasingly focuses on well-being as travelers seek
+experiences that support both physical and emotional health.
+Wellness retreats combine beautiful natural settings with activities
+designed to encourage rest, reflection, and renewal.
 </p>
 
 <p>
-Experiences often include yoga sessions, meditation classes, spa therapies, healthy cuisine, wellness workshops, and guided relaxation programs. These carefully designed activities encourage participants to step away from everyday pressures and invest time in self-care.
+Many wellness destinations incorporate mindfulness practices, yoga,
+meditation, nutritious cuisine, nature immersion, and holistic
+therapies. These experiences allow guests to disconnect from daily
+stress while creating space for self-care and personal growth.
 </p>
 
 <p>
-Whether located in tropical gardens, mountain landscapes, or coastal settings, wellness retreats create supportive environments where guests can restore balance, improve well-being, and return home feeling refreshed and inspired.
+The value of wellness travel extends beyond a single trip. Travelers
+often return home with healthier habits, greater awareness, and a
+renewed appreciation for balance. Whether located beside mountains,
+forests, lakes, or oceans, wellness retreats offer opportunities to
+restore energy and reconnect with what matters most.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Experience Highlights</strong>
+<h4>Experience Highlights</h4>
 
 <ul>
-<li>Yoga and meditation</li>
+<li>Yoga and meditation programs</li>
 <li>Spa and wellness therapies</li>
-<li>Healthy lifestyle programs</li>
+<li>Healthy lifestyle experiences</li>
 <li>Mindfulness practices</li>
-<li>Relaxing natural surroundings</li>
+<li>Nature-inspired healing</li>
 </ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="article">
-
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80">
-
-<div class="article-text">
-
-<h3>
-Ocean Escapes For Mind & Soul
-</h3>
-
-<p>
-For many travelers, the ocean represents freedom, peace, and renewal. The rhythmic movement of waves, fresh coastal air, and expansive horizons create environments that naturally encourage relaxation and reflection.
-</p>
-
-<p>
-Ocean wellness experiences allow visitors to disconnect from daily distractions while reconnecting with the natural world. Whether enjoying quiet beach walks, sunrise views, coastal retreats, or moments of peaceful reflection beside the sea, travelers often find comfort and clarity in these environments.
-</p>
-
-<p>
-Coastal destinations continue to inspire wellness journeys because they offer opportunities to rest, recharge, and appreciate the simple beauty of nature.
-</p>
-
-<div class="highlights">
-
-<strong>Experience Highlights</strong>
-
-<ul>
-<li>Beach wellness retreats</li>
-<li>Coastal relaxation</li>
-<li>Sunrise and sunset experiences</li>
-<li>Mindful ocean walks</li>
-<li>Nature-inspired renewal</li>
-</ul>
-
-</div>
 
 </div>
 
@@ -477,49 +502,112 @@ Coastal destinations continue to inspire wellness journeys because they offer op
 
 </section>
 
-<section class="section">
+<!-- ARTICLE 4 -->
 
-<div class="section-title">
+<section class="blog-card">
 
-<span>Home & Accommodation</span>
+<div class="blog-image">
 
-<h2>
-Places That Feel Like Home
-</h2>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80">
 
 </div>
 
-<div class="article">
+<div class="blog-content">
 
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80">
-
-<div class="article-text">
-
-<h3>
-Luxury Villas & Resorts
-</h3>
+<h3>Ocean Escapes For Mind & Soul</h3>
 
 <p>
-Exceptional accommodations have the ability to transform a trip into an unforgettable experience. Luxury villas and resorts combine comfort, privacy, hospitality, and beautiful surroundings to create environments where guests can fully relax and enjoy their journey.
+For countless travelers, the ocean represents freedom, tranquility,
+and renewal. The rhythmic movement of waves, fresh sea air, and
+expansive horizons naturally encourage relaxation and reflection.
 </p>
 
 <p>
-Many travelers seek accommodations that provide more than convenience. Thoughtful design, personalized service, and carefully curated guest experiences help create meaningful memories that remain long after a trip has ended.
+Coastal destinations provide opportunities to slow down and appreciate
+the beauty of simple experiences. Whether enjoying sunrise walks,
+quiet moments beside the water, or peaceful evenings listening to
+waves, the ocean creates an environment where many travelers find
+clarity and inspiration.
 </p>
 
 <p>
-Luxury stays often become destinations in their own right, offering opportunities for relaxation, wellness, and connection with beautiful natural environments.
+Beyond recreation, oceans have long played an important role in human
+history, trade, culture, and exploration. Visiting coastal regions
+offers opportunities to learn about maritime traditions while enjoying
+some of the world's most stunning natural landscapes.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Accommodation Features</strong>
+<h4>Experience Highlights</h4>
+
+<ul>
+<li>Beach wellness retreats</li>
+<li>Sunrise and sunset walks</li>
+<li>Coastal exploration</li>
+<li>Nature-inspired relaxation</li>
+<li>Oceanfront reflection spaces</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section-title">
+
+<span>Places That Feel Like Home</span>
+
+<h2>Exceptional Stays & Accommodations</h2>
+
+</section>
+
+<!-- ARTICLE 5 -->
+
+<section class="blog-card">
+
+<div class="blog-image">
+
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80">
+
+</div>
+
+<div class="blog-content">
+
+<h3>Luxury Villas & Boutique Resorts</h3>
+
+<p>
+Exceptional accommodations have the ability to transform travel into
+an unforgettable experience. Luxury villas and boutique resorts
+combine comfort, privacy, thoughtful hospitality, and beautiful
+surroundings to create environments where guests can fully relax and
+enjoy their journey.
+</p>
+
+<p>
+Unlike large commercial properties, boutique accommodations often
+focus on personalized service and unique design. Every detail is
+carefully curated to provide memorable experiences that reflect the
+character of the destination itself.
+</p>
+
+<p>
+Many travelers remember their accommodations as vividly as the places
+they visit. Beautiful rooms, welcoming staff, scenic views, and
+meaningful hospitality contribute to experiences that remain long
+after the trip has ended.
+</p>
+
+<div class="info-box">
+
+<h4>Accommodation Features</h4>
 
 <ul>
 <li>Private villas</li>
-<li>Luxury resort experiences</li>
-<li>Exceptional hospitality</li>
+<li>Luxury hospitality</li>
 <li>Scenic surroundings</li>
+<li>Personalized guest experiences</li>
 <li>Comfort and relaxation</li>
 </ul>
 
@@ -527,172 +615,172 @@ Luxury stays often become destinations in their own right, offering opportunitie
 
 </div>
 
-</div>
+</section>
 
-<div class="article">
+<section class="section-title">
 
-<img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=80">
+<span>Places That Feel Like Home</span>
 
-<div class="article-text">
+<h2>Unique Stays & Outdoor Escapes</h2>
 
-<h3>
-Unique Places To Stay
-</h3>
+</section>
 
-<p>
-Unique accommodations allow travelers to experience destinations in memorable and meaningful ways. Boutique hotels, eco-lodges, heritage homes, and distinctive properties often reflect the culture, history, and character of the places they call home.
-</p>
+<!-- ARTICLE 6 -->
 
-<p>
-Rather than choosing standard accommodations, many travelers seek experiences that provide authenticity and connection. These stays often become some of the most memorable parts of a journey because they offer a stronger sense of place and identity.
-</p>
+<section class="blog-card">
 
-<p>
-From countryside escapes to eco-conscious retreats, unique accommodations provide opportunities to experience destinations from a different perspective.
-</p>
+<div class="blog-image">
 
-<div class="highlights">
-
-<strong>Popular Options</strong>
-
-<ul>
-<li>Boutique hotels</li>
-<li>Eco-lodges</li>
-<li>Heritage homes</li>
-<li>Countryside retreats</li>
-<li>Nature-inspired stays</li>
-</ul>
+<img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=1400&q=80">
 
 </div>
 
-</div>
+<div class="blog-content">
 
-</div>
-
-<div class="article">
-
-<img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1400&q=80">
-
-<div class="article-text">
-
-<h3>
-Camping Beneath The Stars
-</h3>
+<h3>Camping Beneath The Stars</h3>
 
 <p>
-Camping remains one of the simplest and most rewarding ways to reconnect with nature. Spending nights beneath open skies allows travelers to experience natural environments in a direct and meaningful way.
+Camping remains one of the most authentic ways to experience the natural
+world. Away from city lights and daily distractions, travelers are given
+the opportunity to reconnect with nature through simplicity, adventure,
+and reflection.
 </p>
 
 <p>
-Campfires, stargazing, outdoor cooking, and peaceful mornings surrounded by nature encourage a slower pace of travel that many people find refreshing and restorative. These experiences create opportunities for adventure while fostering appreciation for the outdoors.
+For generations, people have gathered around campfires to share stories,
+prepare meals, and admire the beauty of the night sky. Modern travelers
+continue this tradition through camping experiences that range from
+traditional tents to luxury glamping accommodations.
 </p>
 
 <p>
-Whether experienced through traditional camping or modern glamping, nights spent under the stars often become treasured travel memories.
+Spending nights beneath the stars encourages appreciation for nature's
+rhythms. The sounds of forests, rivers, mountains, and open landscapes
+create unforgettable memories that often become the highlights of an
+entire journey.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Experience Highlights</strong>
+<h4>Experience Highlights</h4>
 
 <ul>
 <li>Stargazing opportunities</li>
-<li>Outdoor adventure</li>
+<li>Outdoor adventures</li>
 <li>Campfire experiences</li>
-<li>Connection with nature</li>
-<li>Memorable travel moments</li>
+<li>Nature immersion</li>
+<li>Peaceful surroundings</li>
 </ul>
-
-</div>
 
 </div>
 
 </div>
 
 </section>
-<section class="section" style="background:#f7fbfa;">
 
-<div class="section-title">
+<section class="section-title">
 
 <span>Learning Experiences</span>
 
-<h2>
-Travel As A Journey Of Learning
-</h2>
+<h2>Travel As A Journey Of Learning</h2>
 
-</div>
+</section>
 
-<div class="article">
+<!-- ARTICLE 7 -->
+
+<section class="blog-card">
+
+<div class="blog-image">
 
 <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80">
 
-<div class="article-text">
+</div>
 
-<h3>
-Photography Tours & Creative Exploration
-</h3>
+<div class="blog-content">
+
+<h3>Photography Tours & Creative Exploration</h3>
 
 <p>
-Photography encourages travelers to observe the world more carefully and appreciate details that often go unnoticed. Through photography experiences, participants learn how to capture landscapes, cultural moments, architecture, wildlife, and everyday life while developing their own creative style.
+Photography transforms travel into a deeper form of observation.
+Through the lens of a camera, travelers begin noticing details,
+textures, colors, architecture, landscapes, and cultural moments
+that might otherwise go unnoticed.
 </p>
 
 <p>
-Beyond technical skills, photography promotes mindfulness and observation. Travelers begin to see destinations differently, paying attention to light, color, texture, and storytelling opportunities that transform ordinary moments into lasting memories.
+Photography journeys encourage patience, creativity, and mindfulness.
+Whether capturing dramatic mountain scenery, vibrant city streets,
+historic architecture, or everyday life, travelers learn how to tell
+stories through visual experiences.
 </p>
 
 <p>
-Photography tours provide a rewarding balance between learning and exploration while encouraging travelers to document meaningful experiences throughout their journeys.
+Beyond technical skills, photography inspires travelers to engage more
+closely with destinations and appreciate moments that become lasting
+memories. Each image becomes a personal record of discovery and growth.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Learning Highlights</strong>
+<h4>Learning Highlights</h4>
 
 <ul>
 <li>Photography techniques</li>
 <li>Creative storytelling</li>
 <li>Landscape photography</li>
-<li>Travel documentation</li>
-<li>Visual observation skills</li>
+<li>Cultural documentation</li>
+<li>Visual creativity</li>
 </ul>
 
 </div>
 
 </div>
 
+</section>
+
+<!-- ARTICLE 8 -->
+
+<section class="blog-card">
+
+<div class="blog-image">
+
+<img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1400&q=80">
+
 </div>
 
-<div class="article">
+<div class="blog-content">
 
-<img src="https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?auto=format&fit=crop&w=1400&q=80">
-
-<div class="article-text">
-
-<h3>
-Cultural Events & Exhibitions
-</h3>
+<h3>Cultural Events & Exhibitions</h3>
 
 <p>
-Festivals, exhibitions, museums, and cultural gatherings provide valuable opportunities to learn directly from communities and traditions. These experiences celebrate creativity, history, heritage, and the diversity that makes every destination unique.
+Festivals, exhibitions, museums, and cultural gatherings provide some
+of the most meaningful learning experiences available to travelers.
+They celebrate history, creativity, identity, and traditions that make
+every destination unique.
 </p>
 
 <p>
-Visitors can explore artistic expression, traditional crafts, music, performance, and historical collections while gaining deeper understanding of local culture. Cultural experiences often create meaningful connections between travelers and the people who call a destination home.
+Visitors gain deeper understanding through local performances,
+traditional arts, music, food experiences, and community celebrations.
+These moments reveal perspectives that guidebooks often cannot fully
+capture.
 </p>
 
 <p>
-Learning through culture encourages curiosity, respect, and appreciation for different perspectives while enriching every travel experience.
+Cultural experiences help create stronger connections between travelers
+and local communities. They encourage curiosity, appreciation, and
+respect while making travel more enriching and memorable.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Experience Highlights</strong>
+<h4>Experience Highlights</h4>
 
 <ul>
-<li>Museums and exhibits</li>
+<li>Museums and exhibitions</li>
 <li>Local festivals</li>
-<li>Art and cultural events</li>
 <li>Traditional performances</li>
+<li>Cultural workshops</li>
 <li>Community engagement</li>
 </ul>
 
@@ -700,33 +788,45 @@ Learning through culture encourages curiosity, respect, and appreciation for dif
 
 </div>
 
-</div>
+</section>
 
-<div class="article">
+<!-- ARTICLE 9 -->
+
+<section class="blog-card">
+
+<div class="blog-image">
 
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80">
 
-<div class="article-text">
+</div>
 
-<h3>
-Learning Through Travel
-</h3>
+<div class="blog-content">
+
+<h3>Learning Through Travel</h3>
 
 <p>
-Travel is one of life's greatest teachers. Every destination presents opportunities to learn about history, geography, culture, language, sustainability, and human connection. The lessons gained through travel often remain with us long after a journey has ended.
+Travel is one of the world's greatest teachers. Every destination
+provides opportunities to learn about history, geography, culture,
+language, sustainability, and human connection.
 </p>
 
 <p>
-Experiencing different communities broadens perspectives and encourages personal growth. Whether through conversations with local residents, educational tours, workshops, or cultural exchanges, travel offers valuable opportunities for lifelong learning.
+Experiencing different communities broadens perspectives and encourages
+personal growth. Conversations with local residents, guided tours,
+educational programs, and cultural exchanges all contribute to lifelong
+learning.
 </p>
 
 <p>
-By remaining curious and open-minded, travelers transform ordinary trips into meaningful journeys of discovery and understanding.
+The lessons gained through travel often remain long after the journey
+has ended. By remaining curious and open-minded, travelers transform
+ordinary trips into meaningful experiences of discovery and
+understanding.
 </p>
 
-<div class="highlights">
+<div class="info-box">
 
-<strong>Learning Benefits</strong>
+<h4>Learning Benefits</h4>
 
 <ul>
 <li>Personal growth</li>
@@ -740,91 +840,175 @@ By remaining curious and open-minded, travelers transform ordinary trips into me
 
 </div>
 
-</div>
+</section>
+
+<!-- LYN ELIXIR QUOTE -->
+
+<section class="quote-section">
+
+<p class="quote-mark">❝</p>
+
+<h2>
+Travel is not simply about reaching destinations.
+It is about discovering ourselves through every landscape,
+every conversation, every lesson, and every experience we encounter.
+</h2>
+
+<span>— Lyn Elixir</span>
 
 </section>
 
-<section style="
+<style>
+
+.quote-section{
 padding:140px 10%;
+text-align:center;
 background:
 linear-gradient(
-rgba(16,43,38,.45),
-rgba(16,43,38,.65)
+rgba(10,35,35,.55),
+rgba(10,35,35,.60)
 ),
 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2200&q=80');
 background-size:cover;
 background-position:center;
-text-align:center;
 color:white;
-">
+}
 
-<h2 style="
+.quote-mark{
+font-size:5rem;
+margin-bottom:20px;
+opacity:.7;
+}
+
+.quote-section h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3.5rem;
+line-height:1.3;
+max-width:1100px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.quote-section span{
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:.9rem;
+}
+
+.journal-ending{
+padding:120px 10%;
+text-align:center;
+background:#f6faf8;
+}
+
+.journal-ending h2{
 font-family:'Cormorant Garamond',serif;
 font-size:4rem;
 margin-bottom:30px;
-">
-A Reflection From Lyn Elixir
-</h2>
+color:#173c35;
+}
 
-<p style="
+.journal-ending p{
 max-width:900px;
 margin:auto;
-font-size:1.2rem;
-line-height:2.2;
-font-style:italic;
-">
-“Travel is not only about reaching a destination. It is about discovering yourself, healing your spirit, finding belonging, and learning from the world around you. Every meaningful journey leaves behind memories, lessons, and experiences that continue shaping who we become.”
-</p>
+line-height:2;
+font-size:1.1rem;
+}
 
-<p style="
-margin-top:35px;
+.footer{
+background:#102b26;
+padding:90px 10%;
+text-align:center;
+color:white;
+}
+
+.footer-logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.footer-tagline{
 font-size:1.1rem;
 letter-spacing:2px;
-">
-— Lyn Elixir
+margin-bottom:30px;
+opacity:.9;
+}
+
+.footer p{
+line-height:2;
+max-width:800px;
+margin:auto;
+opacity:.85;
+}
+
+.copyright{
+margin-top:40px;
+font-size:.9rem;
+opacity:.65;
+}
+
+@media(max-width:950px){
+
+.quote-section h2{
+font-size:2.3rem;
+}
+
+.journal-ending h2{
+font-size:3rem;
+}
+
+.footer-logo{
+font-size:2rem;
+}
+
+}
+
+</style>
+
+<section class="journal-ending">
+
+<h2>Continue Your Journey</h2>
+
+<p>
+Every destination holds stories waiting to be discovered, lessons waiting
+to be learned, and experiences capable of transforming the way we see
+the world. Whether you are searching for adventure, wellness,
+accommodation, cultural understanding, or personal growth, meaningful
+travel begins with curiosity and a willingness to explore beyond the
+ordinary.
+</p>
+
+<br><br>
+
+<p>
+Through Lyn's Living Landscapes, our goal is to inspire journeys that
+encourage discovery, healing, learning, and a genuine sense of home
+wherever your travels may take you.
 </p>
 
 </section>
 
-<footer style="
-background:#102b26;
-padding:80px 10%;
-text-align:center;
-color:white;
-">
+<footer class="footer">
 
-<h3 style="
-font-family:'Cormorant Garamond',serif;
-font-size:2.8rem;
-margin-bottom:15px;
-">
+<div class="footer-logo">
 🍃 Lyn's Living Landscapes
-</h3>
+</div>
 
-<p style="
-font-size:1.1rem;
-letter-spacing:2px;
-margin-bottom:25px;
-">
+<div class="footer-tagline">
 Discover • Heal • Home • Learn
+</div>
+
+<p>
+Thank you for reading Lyn Elixir's Journal.
+May every journey bring new perspectives, meaningful memories,
+and opportunities to connect more deeply with people, places,
+nature, and yourself.
 </p>
 
-<p style="
-max-width:700px;
-margin:auto;
-line-height:2;
-opacity:.9;
-">
-Creating meaningful travel experiences through discovery, wellness, accommodation, culture, and lifelong learning. Inspiring travelers to explore the world with curiosity, purpose, and appreciation for every journey.
-</p>
-
-<p style="
-margin-top:35px;
-opacity:.7;
-font-size:.95rem;
-">
+<div class="copyright">
 © 2018 Lyn's Living Landscapes. All Rights Reserved.
-</p>
+</div>
 
 </footer>
 
