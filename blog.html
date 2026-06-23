@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -39,7 +40,7 @@ z-index:999;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:40px 8%;
+padding:30px 8%;
 background:transparent;
 }
 
@@ -51,21 +52,25 @@ color:white;
 text-decoration:none;
 }
 
+.logo span{
+font-size:2.4rem;
+}
+
 .nav-links{
 display:flex;
-gap:35px;
 }
 
 .nav-links a{
 color:white;
 text-decoration:none;
-font-weight:600;
+margin-left:30px;
+font-size:.95rem;
 letter-spacing:1px;
 transition:.3s;
 }
 
 .nav-links a:hover{
-color:#b9ddd4;
+opacity:.8;
 }
 
 /* HERO */
@@ -79,7 +84,7 @@ justify-content:center;
 text-align:center;
 padding:180px 10% 100px;
 background:
-linear-gradient(rgba(10,35,35,.45),rgba(10,35,35,.45)),
+linear-gradient(rgba(10,35,35,.45),rgba(10,35,35,.55)),
 url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80');
 background-size:cover;
 background-position:center;
@@ -272,7 +277,7 @@ padding:40px;
 <div class="navbar">
 
 <a href="index.html" class="logo">
-🌿 Lyn's Living Landscapes
+<span>🍃</span> Lyn's Living Landscapes
 </a>
 
 <div class="nav-links">
