@@ -229,8 +229,29 @@ color:#173c35;
 margin-bottom:25px;
 }
 
+.copy-btn {
+display: inline-block;
+background: var(--forest);
+color: white;
+border: none;
+padding: 14px 28px;
+border-radius: 50px;
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 0.95rem;
+cursor: pointer;
+margin-bottom: 20px;
+box-shadow: 0 4px 15px rgba(23, 60, 53, 0.15);
+transition: 0.3s ease;
+}
+
+.copy-btn:hover {
+background: var(--deep);
+transform: translateY(-2px);
+}
+
 .template{
-margin-top:30px;
+margin-top:10px;
 background:#edf6f5;
 border:2px solid #dbe8e4;
 border-radius:20px;
@@ -239,7 +260,7 @@ line-height:2;
 font-family:monospace;
 white-space:pre-line;
 font-size:1rem;
-overflow-x:auto; /* Ensures user template code scales safely if screen sizes shrink dramatically */
+overflow-x:auto;
 }
 
 .thanks-banner{
@@ -513,9 +534,11 @@ Start Your Inquiry
 <p style="line-height:2; font-size:1.05rem;">
 To help us understand your travel needs, please copy the inquiry template below and send it to:
 </p>
-<p style="font-size:1.3rem; font-weight:600; color:#173c35; margin-top:20px; margin-bottom:30px;">
+<p style="font-size:1.3rem; font-weight:600; color:#173c35; margin-top:20px; margin-bottom:20px;">
 📧 lynslivinglandscapes@gmail.com
 </p>
+
+<button class="copy-btn" id="copyBtn" onclick="copyTemplate()">📋 Copy Template</button>
 
 <div class="template">BOOKING INQUIRY
 
@@ -586,6 +609,25 @@ Discover • Heal • Home • Learn
 © 2018 Lyn's Living Landscapes. All Rights Reserved.
 </p>
 </footer>
+
+<script>
+function copyTemplate() {
+    const templateText = document.querySelector('.template').innerText;
+    
+    navigator.clipboard.writeText(templateText).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.innerHTML = "✅ Copied!";
+        btn.style.background = "var(--sage)"; 
+        
+        setTimeout(() => {
+            btn.innerHTML = "📋 Copy Template";
+            btn.style.background = "var(--forest)";
+        }, 2500);
+    }).catch(err => {
+        console.error('Could not copy text: ', err);
+    });
+}
+</script>
 
 </body>
 </html>
