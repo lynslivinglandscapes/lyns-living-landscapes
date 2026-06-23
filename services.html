@@ -81,10 +81,15 @@ color:white;
 margin-left:30px;
 font-size:.95rem;
 letter-spacing:1px;
+transition:.3s;
+}
+
+.menu a:hover{
+opacity:.8;
 }
 
 .hero{
-height:90vh;
+min-height:90vh;
 background:
 linear-gradient(
 rgba(7,32,28,.45),
@@ -98,6 +103,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
+padding:120px 20px;
 }
 
 .hero-content{
@@ -126,6 +132,12 @@ border-radius:50px;
 background:white;
 color:var(--forest);
 font-weight:600;
+transition:.3s;
+}
+
+.hero-btn:hover{
+background:var(--forest);
+color:white;
 }
 
 .section{
@@ -169,15 +181,19 @@ background:white;
 border-radius:28px;
 overflow:hidden;
 box-shadow:0 20px 50px rgba(0,0,0,.08);
+display:flex;
+flex-direction:column;
 }
 
 .service-card img{
 height:320px;
 object-fit:cover;
+width:100%;
 }
 
 .service-content{
 padding:35px;
+flex-grow:1;
 }
 
 .service-content h3{
@@ -194,11 +210,23 @@ line-height:1.9;
 background:#f3f8f5;
 }
 
+.booking-section {
+padding:120px 10%;
+}
+
 .booking-box{
 background:white;
 border-radius:30px;
 padding:60px;
 box-shadow:0 20px 60px rgba(0,0,0,.08);
+max-width:900px;
+margin:0 auto;
+}
+
+.booking-box h2{
+font-size:3.5rem;
+color:#173c35;
+margin-bottom:25px;
 }
 
 .template{
@@ -210,18 +238,143 @@ padding:35px;
 line-height:2;
 font-family:monospace;
 white-space:pre-line;
+font-size:1rem;
+overflow-x:auto; /* Ensures user template code scales safely if screen sizes shrink dramatically */
 }
 
+.thanks-banner{
+padding:140px 10%;
+text-align:center;
+background:
+linear-gradient(
+rgba(7,32,28,.45),
+rgba(7,32,28,.65)
+),
+url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2200&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.thanks-banner h2{
+font-size:4rem;
+margin-bottom:25px;
+}
+
+.thanks-banner p{
+max-width:850px;
+margin:auto;
+line-height:2;
+font-size:1.1rem;
+}
+
+footer{
+background:#102b26;
+padding:60px 20px;
+text-align:center;
+color:white;
+}
+
+footer h3{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+/* RESPONSIVE MOBILE ADJUSTMENTS */
 @media(max-width:1000px){
-
-.hero h1{
-font-size:3.8rem;
-}
-
 .services-grid{
 grid-template-columns:1fr;
+gap:30px;
+}
 }
 
+@media(max-width:768px){
+.section {
+padding:80px 6%;
+}
+
+nav {
+position:relative;
+background:var(--deep);
+padding:20px 6%;
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.menu a {
+margin:0 10px;
+font-size:.9rem;
+}
+
+.hero {
+min-height:auto;
+padding:80px 20px;
+}
+
+.hero h1 {
+font-size:3.2rem;
+line-height:1.1;
+}
+
+.hero p {
+font-size:1rem;
+line-height:1.6;
+}
+
+.hero-btn {
+padding:14px 32px;
+font-size:0.95rem;
+margin-top:25px;
+}
+
+.center h2 {
+font-size:2.5rem;
+line-height:1.2;
+}
+
+.services-grid {
+margin-top:40px;
+}
+
+.service-card img {
+height:240px;
+}
+
+.service-content {
+padding:25px;
+}
+
+.service-content h3 {
+font-size:1.75rem;
+}
+
+.booking-section {
+padding:60px 4%;
+}
+
+.booking-box {
+padding:35px 20px;
+border-radius:24px;
+}
+
+.booking-box h2 {
+font-size:2.3rem;
+}
+
+.template {
+padding:20px;
+font-size:0.9rem;
+}
+
+.thanks-banner {
+padding:80px 6%;
+}
+
+.thanks-banner h2 {
+font-size:2.3rem;
+line-height:1.2;
+}
 }
 
 </style>
@@ -230,68 +383,51 @@ grid-template-columns:1fr;
 
 <body>
 
-<section class="hero">
-
 <nav>
-
 <div class="logo">
 🍃 Lyn's Living Landscapes
 </div>
-
 <div class="menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="blog.html">Blog</a>
 </div>
-
 </nav>
 
+<section class="hero">
 <div class="hero-content">
-
 <div class="section-tag" style="color:white;">
 EST. 2018
 </div>
-
 <h1>
 Our Services<br>
 & Booking
 </h1>
-
 <p>
 Personalized tourism and hospitality experiences designed around discovery, healing, home and learning. Every journey is thoughtfully tailored to your goals, interests and preferred travel style.
 </p>
-
 <a href="#booking" class="hero-btn">
 Start Your Inquiry
 </a>
-
 </div>
-
 </section>
 
 <section class="section">
-
 <div class="center">
-
 <div class="section-tag">
 TOURISM & HOSPITALITY
 </div>
-
 <h2>
 Travel Designed Around You
 </h2>
-
 <p>
 At Lyn's Living Landscapes, we believe every traveler deserves an experience that feels meaningful, comfortable and inspiring. Since 2018, we have been helping travelers discover destinations, explore cultures, reconnect with nature and create memorable experiences through personalized tourism and hospitality services.
 </p>
-
 </div>
 
 <div class="services-grid">
-
 <div class="service-card">
 <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
-
 <div class="service-content">
 <h3>🌍 Discovery Experiences</h3>
 <p>
@@ -302,7 +438,6 @@ Nature trips, photography tours, wildlife encounters, city exploration, cultural
 
 <div class="service-card">
 <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80">
-
 <div class="service-content">
 <h3>🌿 Healing Experiences</h3>
 <p>
@@ -313,7 +448,6 @@ Wellness-focused journeys, nature retreats, ocean escapes and peaceful environme
 
 <div class="service-card">
 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80">
-
 <div class="service-content">
 <h3>🏡 Home & Accommodation</h3>
 <p>
@@ -324,7 +458,6 @@ Hotels, resorts, villas, eco-lodges, camping experiences and unique stays carefu
 
 <div class="service-card">
 <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80">
-
 <div class="service-content">
 <h3>📚 Learning Experiences</h3>
 <p>
@@ -335,7 +468,6 @@ Cultural immersion, cooking experiences, environmental awareness programs, exhib
 
 <div class="service-card">
 <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80">
-
 <div class="service-content">
 <h3>✨ Customized Travel Planning</h3>
 <p>
@@ -346,7 +478,6 @@ Every traveler is different. We help create personalized itineraries and recomme
 
 <div class="service-card">
 <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=80">
-
 <div class="service-content">
 <h3>🤝 Hospitality Consultation</h3>
 <p>
@@ -354,67 +485,39 @@ Professional guidance for accommodations, destinations, activities and travel pl
 </p>
 </div>
 </div>
-
 </div>
-
 </section>
 
 <section class="section alt">
-
 <div class="center">
-
 <div class="section-tag">
 WHY TRAVEL WITH US
 </div>
-
 <h2>
 Meaningful Experiences
 </h2>
-
 <p>
 We prioritize safety, environmental responsibility, respect for culture and personalized service. Every recommendation is thoughtfully selected to provide meaningful experiences that align with your travel goals.
 </p>
-
 </div>
-
 </section>
 
-<section class="section" id="booking">
-
+<section class="booking-section" id="booking">
 <div class="booking-box">
-
 <div class="section-tag">
 BOOKING INQUIRY
 </div>
-
-<h2 style="
-font-size:3.5rem;
-color:#173c35;
-margin-bottom:25px;
-">
+<h2>
 Start Your Inquiry
 </h2>
-
-<p style="
-line-height:2;
-font-size:1.05rem;
-">
+<p style="line-height:2; font-size:1.05rem;">
 To help us understand your travel needs, please copy the inquiry template below and send it to:
 </p>
-
-<p style="
-font-size:1.3rem;
-font-weight:600;
-color:#173c35;
-margin-top:20px;
-margin-bottom:30px;
-">
+<p style="font-size:1.3rem; font-weight:600; color:#173c35; margin-top:20px; margin-bottom:30px;">
 📧 lynslivinglandscapes@gmail.com
 </p>
 
-<div class="template">
-
-BOOKING INQUIRY
+<div class="template">BOOKING INQUIRY
 
 Full Name:
 
@@ -436,118 +539,53 @@ Budget Range:
 
 Special Requests:
 
-Additional Notes:
+Additional Notes:</div>
 
-</div>
-
-<p style="
-margin-top:30px;
-line-height:2;
-">
+<p style="margin-top:30px; line-height:2;">
 Once completed, simply copy the information above, paste it into your email and send it to our team.
 </p>
-
 </div>
-
 </section>
 
 <section class="section alt">
-
 <div class="center">
-
 <div class="section-tag">
 PERSONAL ATTENTION
 </div>
-
 <h2>
 Every Inquiry Matters
 </h2>
-
 <p>
 Due to the number of inquiries and travel requests we receive, response times may vary.
 </p>
-
 <p style="margin-top:20px;">
 Every inquiry is personally reviewed so we can better understand your preferences, goals and expectations before making recommendations.
 </p>
-
 <p style="margin-top:20px;">
 We appreciate your patience and look forward to helping you discover, heal, feel at home and learn through meaningful travel experiences.
 </p>
-
 </div>
-
 </section>
 
-<section style="
-padding:140px 10%;
-text-align:center;
-background:
-linear-gradient(
-rgba(7,32,28,.45),
-rgba(7,32,28,.65)
-),
-url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2200&q=80');
-background-size:cover;
-background-position:center;
-color:white;
-">
-
-<h2 style="
-font-size:4rem;
-margin-bottom:25px;
-">
-Thank You For Choosing
-Lyn's Living Landscapes
+<section class="thanks-banner">
+<h2>
+Thank You For Choosing<br>Lyn's Living Landscapes
 </h2>
-
-<p style="
-max-width:850px;
-margin:auto;
-line-height:2;
-font-size:1.1rem;
-">
+<p>
 We look forward to helping you discover, heal, feel at home and learn through meaningful travel experiences around the world.
 </p>
-
-<p style="
-margin-top:35px;
-letter-spacing:2px;
-font-size:1.1rem;
-">
+<p style="margin-top:35px; letter-spacing:2px; font-size:1.1rem;">
 Discover • Heal • Home • Learn
 </p>
-
 </section>
 
-<footer style="
-background:#102b26;
-padding:60px;
-text-align:center;
-color:white;
-">
-
-<h3 style="
-font-size:2rem;
-margin-bottom:15px;
-">
-🍃 Lyn's Living Landscapes
-</h3>
-
-<p>
-Tourism • Hospitality • Worldwide Experiences
-</p>
-
-<p style="
-margin-top:15px;
-opacity:.7;
-font-size:.9rem;
-">
+<footer>
+<h3>🍃 Lyn's Living Landscapes</h3>
+<p>Tourism • Hospitality • Worldwide Experiences</p>
+<p style="margin-top:15px; opacity:.7; font-size:.9rem;">
 © 2018 Lyn's Living Landscapes. All Rights Reserved.
 </p>
-
 </footer>
 
 </body>
 </html>
-```
