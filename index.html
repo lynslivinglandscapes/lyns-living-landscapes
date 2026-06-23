@@ -92,7 +92,7 @@ opacity:.8;
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
 background:
 linear-gradient(
 rgba(10,40,35,.35),
@@ -107,21 +107,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 position:relative;
-}
-
-.hero h1{
-font-size:7rem;
-line-height:.95;
-margin-bottom:25px;
-text-shadow:0 5px 30px rgba(0,0,0,.35);
-}
-
-.hero p{
-max-width:800px;
-margin:auto;
-font-size:1.25rem;
-line-height:1.9;
-text-shadow:0 2px 15px rgba(0,0,0,.35);
+padding:120px 20px;
 }
 
 .hero-content{
@@ -140,6 +126,7 @@ margin-bottom:15px;
 font-size:6rem;
 line-height:.95;
 margin-bottom:25px;
+text-shadow:0 5px 30px rgba(0,0,0,.35);
 }
 
 .hero p{
@@ -147,6 +134,7 @@ max-width:760px;
 margin:auto;
 font-size:1.2rem;
 line-height:1.9;
+text-shadow:0 2px 15px rgba(0,0,0,.35);
 }
 
 .hero-btn{
@@ -165,15 +153,18 @@ transition:.3s;
 background:white;
 color:var(--forest);
 }
+
 .hero-tagline{
 margin-top:25px;
 font-size:.95rem;
 letter-spacing:1px;
 color:rgba(255,255,255,.85);
 }
+
 .section{
 padding:120px 10%;
 }
+
 #experiences{
 background:linear-gradient(
 180deg,
@@ -181,6 +172,7 @@ background:linear-gradient(
 #edf6f2 100%
 );
 }
+
 .about{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -193,7 +185,7 @@ margin:0 auto;
 .about img{
 width:100%;
 height:auto;
-min-height:620px; /* Restored to its strong, prominent balance */
+min-height:620px;
 object-fit:cover;
 border-radius:30px;
 box-shadow:0 25px 60px rgba(0,0,0,.12);
@@ -248,6 +240,8 @@ border-radius:28px;
 overflow:hidden;
 box-shadow:0 15px 40px rgba(0,0,0,.08);
 transition:.4s;
+display:flex;
+flex-direction:column;
 }
 
 .card:hover{
@@ -262,6 +256,7 @@ object-fit:cover;
 
 .card-content{
 padding:25px;
+flex-grow:1;
 }
 
 .card h3{
@@ -274,25 +269,174 @@ margin-bottom:12px;
 line-height:1.8;
 }
 
-@media(max-width:1000px){
-
-.hero h1{
-font-size:3.8rem;
+.cta-quote{
+padding:100px 10%;
+background:linear-gradient(135deg,#173c35,#6f9cad);
+color:white;
+text-align:center;
 }
 
-.about{
+.cta-quote h2{
+font-size:3rem;
+max-width:900px;
+margin:auto;
+line-height:1.5;
+}
+
+.cta-banner{
+padding:140px 10%;
+text-align:center;
+background:
+linear-gradient(
+rgba(15,45,40,.60),
+rgba(15,45,40,.60)
+),
+url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.cta-banner h2{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.cta-banner p{
+max-width:700px;
+margin:auto;
+line-height:2;
+font-size:1.1rem;
+}
+
+.cta-btn{
+display:inline-block;
+margin-top:20px;
+padding:16px 36px;
+border-radius:50px;
+border:1px solid rgba(255,255,255,.6);
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(8px);
+color:white;
+font-size:1rem;
+transition:.3s;
+}
+
+.cta-btn:hover{
+background:white;
+color:var(--forest);
+}
+
+footer{
+background:#102b26;
+padding:60px 20px;
+text-align:center;
+color:white;
+}
+
+footer h3{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+/* RESPONSIVE RESPONSIVENESS OVERHAUL */
+@media(max-width:1100px){
+.cards {
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.section {
+padding:80px 6%;
+}
+
+nav {
+position:relative;
+background:var(--deep);
+padding:20px 6%;
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.menu a {
+margin:0 10px;
+font-size:.9rem;
+}
+
+.hero {
+min-height:auto;
+padding:80px 20px;
+}
+
+.hero h1 {
+font-size:3.2rem;
+line-height:1.1;
+}
+
+.hero p {
+font-size:1rem;
+line-height:1.6;
+}
+
+.hero-btn {
+padding:14px 32px;
+font-size:0.95rem;
+}
+
+.about {
 grid-template-columns:1fr;
 gap:40px;
 }
 
-.about img{
-min-height:450px; /* Adjusts down for tablets and smaller screens */
+.about img {
+min-height:auto;
+height:380px;
 }
 
-.cards{
+.about h2 {
+font-size:2.6rem;
+}
+
+.center-title {
+margin-bottom:40px;
+}
+
+.center-title h2 {
+font-size:2.3rem;
+}
+
+.cards {
 grid-template-columns:1fr;
+gap:25px;
 }
 
+.card h3 {
+font-size:1.75rem;
+}
+
+.cta-quote {
+padding:70px 6%;
+}
+
+.cta-quote h2 {
+font-size:1.8rem;
+line-height:1.4;
+}
+
+.cta-banner {
+padding:80px 6%;
+}
+
+.cta-banner h2 {
+font-size:2.5rem;
+}
+
+.cta-banner p {
+font-size:1rem;
+line-height:1.7;
+}
 }
 
 </style>
@@ -301,35 +445,27 @@ grid-template-columns:1fr;
 
 <body>
 
-<section class="hero">
-
 <nav>
-
 <div class="logo">
 <span>🍃</span> Lyn's Living Landscapes
 </div>
-
 <div class="menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="blog.html">Blog</a>
 </div>
-
 </nav>
 
+<section class="hero">
 <div class="hero-content">
-
 <div class="est">EST. 2018</div>
-
 <h1>
 Rooted in Nature.<br>
 Inspired by Possibility.
 </h1>
-
 <p>
 Discover extraordinary destinations, healing escapes, unique accommodations and meaningful learning experiences thoughtfully curated for every traveler. Explore the world through discovery, healing, home and learning.
 </p>
-
 <a href="#experiences" class="hero-btn">
 Explore Experiences
 </a>
@@ -337,49 +473,31 @@ Explore Experiences
 Customized Experiences • Worldwide Destinations • Since 2018
 </p>
 </div>
-
 </section>
 
 <section class="section" id="about">
-
 <div class="about">
-
 <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80" alt="Forest">
-
 <div>
-
 <div class="section-tag">ABOUT US</div>
-
 <h2>Welcome to Lyn's Living Landscapes</h2>
-
 <p>
 Since 2018, Lyn's Living Landscapes has been helping travelers discover meaningful experiences through tourism and hospitality.
 </p>
-
 <p>
 We specialize in personalized journeys focused on discovery, healing, home and learning. From nature adventures and cultural immersion to wellness retreats and unique accommodations, every experience is thoughtfully tailored to your interests and goals.
 </p>
-
 <p>
 Whether you are seeking relaxation, exploration, inspiration or connection, we help create journeys that leave lasting memories while respecting people, culture and the environment.
 </p>
-
 </div>
-
 </div>
-
 </section>
 
 <section class="section" id="experiences">
-
 <div class="center-title">
-
 <span>OUR EXPERIENCES</span>
-
-<h2>
-Discovery • Healing • Home • Learning
-</h2>
-
+<h2>Discovery • Healing • Home • Learning</h2>
 </div>
 
 <div class="cards">
@@ -422,25 +540,16 @@ Learn through cooking experiences, environmental awareness, cultural immersion, 
 </p>
 </div>
 </div>
-
 </div>
-
 </section>
 
 <section class="section">
-
 <div class="center-title">
-
 <span>WHY TRAVEL WITH US</span>
-
-<h2>
-Guided By Purpose
-</h2>
-
+<h2>Guided By Purpose</h2>
 </div>
 
 <div class="cards">
-
 <div class="card">
 <div class="card-content">
 <h3>🛡 Safety First</h3>
@@ -476,123 +585,37 @@ Every itinerary can be customized according to your interests, travel goals and 
 </p>
 </div>
 </div>
-
 </div>
-
 </section>
 
-<section style="
-padding:100px 10%;
-background:linear-gradient(135deg,#173c35,#6f9cad);
-color:white;
-text-align:center;
-">
-
-<h2 style="
-font-size:3rem;
-max-width:900px;
-margin:auto;
-line-height:1.5;
-">
-
-“Every landscape tells a story.
-Every journey offers an opportunity
-to discover, heal, belong and learn.”
-
+<section class="cta-quote">
+<h2>
+“Every landscape tells a story. Every journey offers an opportunity to discover, heal, belong and learn.”
 </h2>
-
 </section>
 
-<section style="
-padding:140px 10%;
-text-align:center;
-background:
-linear-gradient(
-rgba(15,45,40,.60),
-rgba(15,45,40,.60)
-),
-url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800');
-background-size:cover;
-background-position:center;
-color:white;
-">
-
-<h2 style="font-size:4rem;margin-bottom:20px;">
-Begin Your Journey
-</h2>
-
-<p style="
-max-width:700px;
-margin:auto;
-line-height:2;
-font-size:1.1rem;
-">
-
+<section class="cta-banner">
+<h2>Begin Your Journey</h2>
+<p>
 Let us help create a personalized experience inspired by your interests, goals and travel dreams.
-
 </p>
-
-<p style="
-max-width:700px;
-margin:30px auto;
-line-height:2;
-font-size:1.1rem;
-">
+<p style="margin:30px auto;">
 Discovery • Healing • Home • Learning
 </p>
-
-<a href="mailto:lynslivinglandscapes@gmail.com"
-style="
-display:inline-block;
-margin-top:20px;
-padding:16px 36px;
-border-radius:50px;
-border:1px solid rgba(255,255,255,.6);
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(8px);
-color:white;
-font-size:1rem;
-transition:.3s;
-">
+<a href="mailto:lynslivinglandscapes@gmail.com" class="cta-btn">
 Start Planning Your Experience
 </a>
-
-<p style="
-margin-top:25px;
-opacity:.85;
-">
+<p style="margin-top:25px; opacity:.85;">
 lynslivinglandscapes@gmail.com
 </p>
-
 </section>
 
-<footer style="
-background:#102b26;
-padding:60px;
-text-align:center;
-color:white;
-">
-
-<h3 style="
-font-size:2rem;
-margin-bottom:15px;
-">
-🍃 Lyn's Living Landscapes
-</h3>
-
-<p>
-Tourism • Hospitality • Worldwide Experiences
-</p>
-
-
-<p style="
-margin-top:15px;
-opacity:.6;
-font-size:.9rem;
-">
+<footer>
+<h3>🍃 Lyn's Living Landscapes</h3>
+<p>Tourism • Hospitality • Worldwide Experiences</p>
+<p style="margin-top:15px; opacity:.6; font-size:.9rem;">
 © 2018 Lyn's Living Landscapes. All Rights Reserved.
 </p>
-
 </footer>
 
 </body>
