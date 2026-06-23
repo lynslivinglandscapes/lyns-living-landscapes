@@ -1,25 +1,717 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Journal | Lyn's Living Landscapes</title>
+
+<title>Blog | Lyn's Living Landscapes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--forest:#173c35;
+--deep:#102b26;
+--sage:#8da89a;
+--ocean:#7aa8b8;
+--mist:#eef7f5;
+--white:#ffffff;
+--gold:#d8c39a;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(
+180deg,
+#eef7f5 0%,
+#f8fbfa 50%,
+#eef7f5 100%
+);
+color:#2b4039;
+overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+font-family:'Cormorant Garamond',serif;
+font-weight:600;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+display:block;
+width:100%;
+}
+
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:30px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:700;
+color:white;
+}
+
+.menu a{
+color:white;
+margin-left:30px;
+font-size:.95rem;
+letter-spacing:1px;
+}
+
+.hero{
+height:90vh;
+background:
+linear-gradient(
+rgba(7,32,28,.45),
+rgba(7,32,28,.65)
+),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+padding:20px;
+}
+
+.hero-tag{
+letter-spacing:4px;
+font-size:.85rem;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:6rem;
+line-height:.95;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:1.15rem;
+line-height:2;
+max-width:800px;
+margin:auto;
+}
+
+.hero-author{
+margin-top:35px;
+font-size:1rem;
+letter-spacing:2px;
+}
+
+.section{
+padding:120px 10%;
+}
+
+.section-title{
+text-align:center;
+max-width:900px;
+margin:auto auto 80px;
+}
+
+.section-title span{
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:.8rem;
+color:var(--ocean);
+}
+
+.section-title h2{
+font-size:4rem;
+color:var(--forest);
+margin:20px 0;
+}
+
+.section-title p{
+line-height:2;
+}
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+}
+
+.blog-card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.blog-card:hover{
+transform:translateY(-8px);
+}
+
+.blog-card img{
+height:260px;
+object-fit:cover;
+}
+
+.blog-content{
+padding:30px;
+}
+
+.blog-category{
+font-size:.8rem;
+letter-spacing:2px;
+color:var(--ocean);
+text-transform:uppercase;
+margin-bottom:12px;
+}
+
+.blog-content h3{
+font-size:2rem;
+color:var(--forest);
+margin-bottom:15px;
+}
+
+.blog-content p{
+line-height:1.9;
+font-size:.95rem;
+margin-bottom:20px;
+}
+
+.author{
+font-size:.85rem;
+font-weight:600;
+color:var(--forest);
+}
+
+.alt{
+background:#f3f8f6;
+}
+
+.quote-section{
+padding:160px 10%;
+text-align:center;
+background:
+linear-gradient(
+rgba(8,30,27,.55),
+rgba(8,30,27,.65)
+),
+url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2200&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.quote-section h2{
+font-size:4rem;
+max-width:1000px;
+margin:auto;
+line-height:1.2;
+}
+
+.quote-section p{
+margin-top:35px;
+font-size:1.1rem;
+letter-spacing:2px;
+}
+
+footer{
+background:#102b26;
+padding:70px;
+text-align:center;
+color:white;
+}
+
+footer h3{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+footer p{
+line-height:2;
+}
+
+@media(max-width:1100px){
+
+.blog-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.section-title h2{
+font-size:3rem;
+}
+
+.quote-section h2{
+font-size:2.8rem;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
+<section class="hero">
+
 <nav>
+
+<div class="logo">
+🍃 Lyn's Living Landscapes
+</div>
+
+<div class="menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="blog.html">Blog</a>
+</div>
+
 </nav>
 
-<h1>Journal</h1>
+<div class="hero-content">
+
+<div class="hero-tag">
+Travel Journal • Since 2018
+</div>
+
+<h1>
+Discover • Heal<br>
+Home • Learn
+</h1>
 
 <p>
-Thoughts, reflections and stories about nature,
-wellness, culture and personal discovery.
+Stories, inspiration and meaningful experiences from around the world. Explore discovery, wellness, accommodation and learning opportunities designed to enrich every journey.
 </p>
+
+<div class="hero-author">
+Written by Lyn Elixir
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-title">
+
+<span>Travel Stories & Inspiration</span>
+
+<h2>
+Meaningful Experiences Around The World
+</h2>
+
+<p>
+Explore inspiring destinations, healing retreats, unique accommodations and enriching learning experiences through our collection of travel stories and discoveries.
+</p>
+
+</div>
+
+<div class="blog-grid">
+
+<!-- DISCOVERY 1 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Discovery
+</div>
+
+<h3>
+Hidden Waterfalls Worth Discovering
+</h3>
+
+<p>
+From tropical forests to mountain valleys, hidden waterfalls offer unforgettable moments of wonder and connection with nature.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- DISCOVERY 2 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Discovery
+</div>
+
+<h3>
+Exploring Heritage Towns
+</h3>
+
+<p>
+Step into history through preserved architecture, local traditions and cultural stories that continue to inspire modern travelers.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- DISCOVERY 3 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Discovery
+</div>
+
+<h3>
+Wildlife Encounters
+</h3>
+
+<p>
+Responsible wildlife experiences provide opportunities to appreciate nature while supporting conservation and environmental awareness.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+```html
+<!-- HEALING 1 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Healing
+</div>
+
+<h3>
+Nature As A Path To Wellness
+</h3>
+
+<p>
+Surrounded by forests, rivers and fresh air, nature offers a peaceful environment that helps restore balance and well-being.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- HEALING 2 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Healing
+</div>
+
+<h3>
+Wellness Retreat Experiences
+</h3>
+
+<p>
+Spa therapies, mindfulness practices and wellness retreats create opportunities for travelers to recharge and reconnect.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- HEALING 3 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Healing
+</div>
+
+<h3>
+Ocean Escapes For Mind & Soul
+</h3>
+
+<p>
+The calming rhythm of the ocean creates a soothing environment ideal for reflection, relaxation and renewal.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- HOME 1 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Home
+</div>
+
+<h3>
+Luxury Villas & Resorts
+</h3>
+
+<p>
+Experience comfort, privacy and unforgettable hospitality through carefully selected villas and resort accommodations.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- HOME 2 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Home
+</div>
+
+<h3>
+Unique Places To Stay
+</h3>
+
+<p>
+From boutique hotels to eco-lodges, travelers can enjoy accommodations that create memorable experiences.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- HOME 3 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Home
+</div>
+
+<h3>
+Camping Beneath The Stars
+</h3>
+
+<p>
+Reconnect with nature through camping experiences that provide simplicity, adventure and unforgettable nights outdoors.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- LEARNING 1 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Learning
+</div>
+
+<h3>
+Photography Tours
+</h3>
+
+<p>
+Capture landscapes, wildlife and cultural moments while improving your photography skills through guided experiences.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- LEARNING 2 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Learning
+</div>
+
+<h3>
+Cultural Events & Exhibits
+</h3>
+
+<p>
+Discover local traditions, festivals and exhibits that offer meaningful opportunities to learn and connect.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+<!-- LEARNING 3 -->
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80">
+
+<div class="blog-content">
+
+<div class="blog-category">
+Learning
+</div>
+
+<h3>
+Learning Through Travel
+</h3>
+
+<p>
+Travel creates opportunities to gain knowledge, broaden perspectives and build meaningful connections with people and places.
+</p>
+
+<div class="author">
+By Lyn Elixir
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="quote-section">
+
+<h2>
+“Travel is not only about reaching a destination. It is about discovering yourself, healing your spirit, finding belonging and learning from the world around you.”
+</h2>
+
+<p>
+— Lyn Elixir
+</p>
+
+</section>
+
+<footer>
+
+<h3>
+🍃 Lyn's Living Landscapes
+</h3>
+
+<p>
+Discover • Heal • Home • Learn
+</p>
+
+<p style="margin-top:15px; opacity:.7; font-size:.9rem;">
+© 2018 Lyn's Living Landscapes. All Rights Reserved.
+</p>
+
+</footer>
 
 </body>
 </html>
+```
