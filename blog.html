@@ -30,20 +30,17 @@ overflow-x:hidden;
 
 /* NAVIGATION */
 
-header{
-position:fixed;
+.navbar{
+position:absolute;
 top:0;
+left:0;
 width:100%;
 z-index:999;
-background:rgba(17,42,44,.82);
-backdrop-filter:blur(14px);
-padding:20px 8%;
-}
-
-.navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:40px 8%;
+background:transparent;
 }
 
 .logo{
@@ -74,12 +71,13 @@ color:#b9ddd4;
 /* HERO */
 
 .hero{
+position:relative;
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:140px 10% 100px;
+padding:180px 10% 100px;
 background:
 linear-gradient(rgba(10,35,35,.45),rgba(10,35,35,.45)),
 url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80');
@@ -237,6 +235,10 @@ margin-bottom:10px;
 
 @media(max-width:950px){
 
+.navbar{
+padding:30px 5%;
+}
+
 .hero h1{
 font-size:4rem;
 }
@@ -265,7 +267,7 @@ padding:40px;
 
 <body>
 
-<header>
+<section class="hero">
 
 <div class="navbar">
 
@@ -280,10 +282,6 @@ padding:40px;
 </div>
 
 </div>
-
-</header>
-
-<section class="hero">
 
 <div class="hero-content">
 
@@ -336,8 +334,6 @@ with greater appreciation and wonder.
 <h2>Explore The World With Wonder</h2>
 
 </section>
-
-<!-- ARTICLE 1 -->
 
 <section class="blog-card">
 
@@ -393,8 +389,6 @@ paths and embrace the spirit of exploration.
 
 </section>
 
-<!-- ARTICLE 2 -->
-
 <section class="blog-card">
 
 <div class="blog-image">
@@ -448,8 +442,6 @@ with future generations.
 
 </section>
 
-<!-- ARTICLE 3 -->
-
 <section class="blog-card">
 
 <div class="blog-image">
@@ -476,14 +468,6 @@ therapies. These experiences allow guests to disconnect from daily
 stress while creating space for self-care and personal growth.
 </p>
 
-<p>
-The value of wellness travel extends beyond a single trip. Travelers
-often return home with healthier habits, greater awareness, and a
-renewed appreciation for balance. Whether located beside mountains,
-forests, lakes, or oceans, wellness retreats offer opportunities to
-restore energy and reconnect with what matters most.
-</p>
-
 <div class="info-box">
 
 <h4>Experience Highlights</h4>
@@ -501,8 +485,6 @@ restore energy and reconnect with what matters most.
 </div>
 
 </section>
-
-<!-- ARTICLE 4 -->
 
 <section class="blog-card">
 
@@ -528,13 +510,6 @@ the beauty of simple experiences. Whether enjoying sunrise walks,
 quiet moments beside the water, or peaceful evenings listening to
 waves, the ocean creates an environment where many travelers find
 clarity and inspiration.
-</p>
-
-<p>
-Beyond recreation, oceans have long played an important role in human
-history, trade, culture, and exploration. Visiting coastal regions
-offers opportunities to learn about maritime traditions while enjoying
-some of the world's most stunning natural landscapes.
 </p>
 
 <div class="info-box">
@@ -563,8 +538,6 @@ some of the world's most stunning natural landscapes.
 
 </section>
 
-<!-- ARTICLE 5 -->
-
 <section class="blog-card">
 
 <div class="blog-image">
@@ -590,13 +563,6 @@ Unlike large commercial properties, boutique accommodations often
 focus on personalized service and unique design. Every detail is
 carefully curated to provide memorable experiences that reflect the
 character of the destination itself.
-</p>
-
-<p>
-Many travelers remember their accommodations as vividly as the places
-they visit. Beautiful rooms, welcoming staff, scenic views, and
-meaningful hospitality contribute to experiences that remain long
-after the trip has ended.
 </p>
 
 <div class="info-box">
@@ -625,8 +591,6 @@ after the trip has ended.
 
 </section>
 
-<!-- ARTICLE 6 -->
-
 <section class="blog-card">
 
 <div class="blog-image">
@@ -651,13 +615,6 @@ For generations, people have gathered around campfires to share stories,
 prepare meals, and admire the beauty of the night sky. Modern travelers
 continue this tradition through camping experiences that range from
 traditional tents to luxury glamping accommodations.
-</p>
-
-<p>
-Spending nights beneath the stars encourages appreciation for nature's
-rhythms. The sounds of forests, rivers, mountains, and open landscapes
-create unforgettable memories that often become the highlights of an
-entire journey.
 </p>
 
 <div class="info-box">
@@ -686,8 +643,6 @@ entire journey.
 
 </section>
 
-<!-- ARTICLE 7 -->
-
 <section class="blog-card">
 
 <div class="blog-image">
@@ -705,19 +660,6 @@ Photography transforms travel into a deeper form of observation.
 Through the lens of a camera, travelers begin noticing details,
 textures, colors, architecture, landscapes, and cultural moments
 that might otherwise go unnoticed.
-</p>
-
-<p>
-Photography journeys encourage patience, creativity, and mindfulness.
-Whether capturing dramatic mountain scenery, vibrant city streets,
-historic architecture, or everyday life, travelers learn how to tell
-stories through visual experiences.
-</p>
-
-<p>
-Beyond technical skills, photography inspires travelers to engage more
-closely with destinations and appreciate moments that become lasting
-memories. Each image becomes a personal record of discovery and growth.
 </p>
 
 <div class="info-box">
@@ -738,8 +680,6 @@ memories. Each image becomes a personal record of discovery and growth.
 
 </section>
 
-<!-- ARTICLE 8 -->
-
 <section class="blog-card">
 
 <div class="blog-image">
@@ -757,19 +697,6 @@ Festivals, exhibitions, museums, and cultural gatherings provide some
 of the most meaningful learning experiences available to travelers.
 They celebrate history, creativity, identity, and traditions that make
 every destination unique.
-</p>
-
-<p>
-Visitors gain deeper understanding through local performances,
-traditional arts, music, food experiences, and community celebrations.
-These moments reveal perspectives that guidebooks often cannot fully
-capture.
-</p>
-
-<p>
-Cultural experiences help create stronger connections between travelers
-and local communities. They encourage curiosity, appreciation, and
-respect while making travel more enriching and memorable.
 </p>
 
 <div class="info-box">
@@ -790,8 +717,6 @@ respect while making travel more enriching and memorable.
 
 </section>
 
-<!-- ARTICLE 9 -->
-
 <section class="blog-card">
 
 <div class="blog-image">
@@ -808,20 +733,6 @@ respect while making travel more enriching and memorable.
 Travel is one of the world's greatest teachers. Every destination
 provides opportunities to learn about history, geography, culture,
 language, sustainability, and human connection.
-</p>
-
-<p>
-Experiencing different communities broadens perspectives and encourages
-personal growth. Conversations with local residents, guided tours,
-educational programs, and cultural exchanges all contribute to lifelong
-learning.
-</p>
-
-<p>
-The lessons gained through travel often remain long after the journey
-has ended. By remaining curious and open-minded, travelers transform
-ordinary trips into meaningful experiences of discovery and
-understanding.
 </p>
 
 <div class="info-box">
@@ -841,8 +752,6 @@ understanding.
 </div>
 
 </section>
-
-<!-- LYN ELIXIR QUOTE -->
 
 <section class="quote-section">
 
